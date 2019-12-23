@@ -1,15 +1,20 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import './reset.css';
-import Header from './components/header/header';
-
-import { AppWrap } from './appStyles';
+import Vehicle from './components/vehicle/vehicle';
 
 function App() {
-  return (
-    <AppWrap>
-      <Header />
-    </AppWrap>
-  );
+  const [page, setPage] = useState(1);
+
+  switch (page) {
+    case(1):
+      return <Vehicle />
+    case(2):
+      return <Vehicle />
+    case(3):
+      return <Vehicle />
+    case(4):
+      return <Vehicle />
+  }
 }
 
 export default App;
