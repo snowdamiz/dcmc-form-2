@@ -8,8 +8,8 @@ export const colors = {
 }
 
 export const fonts = {
-    heading: `font-family: 'Montserrat', sans-serif`,
-    text: `font-family: 'Nunito', sans-serif`
+    heading: `'Montserrat', sans-serif`,
+    text: `'Nunito', sans-serif`
 }
 
 export const media = {
