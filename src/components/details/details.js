@@ -1,16 +1,16 @@
 import React from 'react';
 import Header from '../header/header';
-import Nav from '../nav/nav';
+import Nav from '../nav/nav'; 
 
 import {
     DetailsWrap
 } from './detailsStyles';
 
-function Details () {
+function Details (props) {
     return (
         <DetailsWrap>
             <Header />
-            <Nav />
+            <Nav /> 
         </DetailsWrap>
     )
 }
