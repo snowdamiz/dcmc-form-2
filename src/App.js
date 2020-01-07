@@ -32,7 +32,7 @@ function App() {
     case(4):
       return <Details
               page={page}
-              setPage={setPage} />
+              setPage={setPage}  />
   }
 }
 
