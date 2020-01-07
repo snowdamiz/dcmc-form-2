@@ -3,6 +3,7 @@ import './reset.css';
 
 import Vehicle from './components/vehicle/vehicle';
 import Datetime from './components/datetime/datetime';
+import Beverage from './components/beverage/beverage';
 
 function App() {
   const [page, setPage] = useState(1);
@@ -22,7 +23,7 @@ function App() {
       return <Datetime
               page={page} />
     case(3):
-      return <Vehicle
+      return <Beverage
               page={page} />
     case(4):
       return <Vehicle
