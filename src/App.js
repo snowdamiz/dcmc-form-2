@@ -4,6 +4,7 @@ import './reset.css';
 import Vehicle from './components/vehicle/vehicle';
 import Datetime from './components/datetime/datetime';
 import Beverage from './components/beverage/beverage';
+import Details from './components/details/details';
 
 function App() {
   const [page, setPage] = useState(1);
@@ -18,16 +19,20 @@ function App() {
   switch (page) {
     case(1):
       return <Vehicle 
-              page={page} />
+              page={page}
+              setPage={setPage} />
     case(2):
       return <Datetime
-              page={page} />
+              page={page}
+              setPage={setPage} />
     case(3):
       return <Beverage
-              page={page} />
+              page={page}
+              setPage={setPage} />
     case(4):
-      return <Vehicle
-              page={page} />
+      return <Details
+              page={page}
+              setPage={setPage} />
   }
 }
 
