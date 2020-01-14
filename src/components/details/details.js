@@ -10,7 +10,9 @@ function Details (props) {
     return (
         <DetailsWrap>
             <Header />
-            <Nav /> 
+            <Nav
+                page={props.page}
+                setPage={props.setPage} />
         </DetailsWrap>
     )
 }

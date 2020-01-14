@@ -9,9 +9,11 @@ import {
     NavLinkDesc,
 } from '../navStyles';
 
-function Details () {
+function Details (props) {
+    const HandlePage = () => props.setPage(4);
+
     return (
-        <DetailsWrap>
+        <DetailsWrap onClick={HandlePage}>
             <ImgBox>
                 <Img src="#" />
             </ImgBox>

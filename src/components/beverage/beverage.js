@@ -11,7 +11,9 @@ function Beverage (props) {
     return (
         <BeverageWrap>
             <Header />
-            <Nav />
+            <Nav
+                page={props.page}
+                setPage={props.setPage} />
             <NextBtn
                 page={props.page}
                 setPage={props.setPage} />

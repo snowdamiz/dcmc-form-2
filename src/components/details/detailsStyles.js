@@ -6,4 +6,8 @@ export const DetailsWrap = styled.section`
     height: 100vh;
     border: 1px solid blue;
     position: absolute;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: center;
 `;

@@ -8,13 +8,21 @@ import {
     NavWrap
 } from './navStyles';
 
-function Nav () {
+function Nav (props) {
     return (
         <NavWrap>
-            <Car />
-            <Time />
-            <Drinks />
-            <Details />
+            <Car
+                page={props.page}
+                setPage={props.setPage} />
+            <Time 
+                page={props.page}
+                setPage={props.setPage} />
+            <Drinks 
+                page={props.page}
+                setPage={props.setPage} />
+            <Details 
+                page={props.page}
+                setPage={props.setPage} />
         </NavWrap>
     )
 }

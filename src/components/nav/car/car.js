@@ -9,9 +9,11 @@ import {
     NavLinkDesc,
 } from '../navStyles';
 
-function Car () {
+function Car (props) {
+    const HandlePage = () => props.setPage(1);
+
     return (
-        <CarWrap>
+        <CarWrap onClick={HandlePage}>
             <ImgBox>
                 <Img src="#" />
             </ImgBox>

@@ -9,9 +9,11 @@ import {
     NavLinkDesc,
 } from '../navStyles';
 
-function Drinks () {
+function Drinks (props) {
+    const HandlePage = () => props.setPage(3);
+
     return (
-        <DrinksWrap>
+        <DrinksWrap onClick={HandlePage}>
             <ImgBox>
                 <Img src="#" />
             </ImgBox>

@@ -11,7 +11,9 @@ function Datetime (props) {
     return (
         <DatetimeWrap>
             <Header />
-            <Nav />
+            <Nav
+                page={props.page}
+                setPage={props.setPage} />
             <NextBtn
                 page={props.page}
                 setPage={props.setPage} />

@@ -9,9 +9,11 @@ import {
     NavLinkDesc,
 } from '../navStyles';
 
-function Time () {
+function Time (props) {
+    const HandlePage = () => props.setPage(2);
+
     return (
-        <TimeWrap>
+        <TimeWrap onClick={HandlePage}>
             <ImgBox>
                 <Img src="#" />
             </ImgBox>

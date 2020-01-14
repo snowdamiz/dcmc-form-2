@@ -11,7 +11,9 @@ function Vehicle (props) {
     return (
         <VehicleWrap>
             <Header />
-            <Nav />
+            <Nav
+                page={props.page}
+                setPage={props.setPage}/>
             <NextBtn
                 page={props.page}
                 setPage={props.setPage} />
