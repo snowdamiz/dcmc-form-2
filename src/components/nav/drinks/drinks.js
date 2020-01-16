@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 
 import { DrinksWrap } from './drinksStyles';
 import DrinkIMG from '../../../assets/drink.svg';
@@ -11,10 +11,18 @@ import {
 } from '../navStyles';
 
 function Drinks (props) {
+    const [active, setActive] = useState(false);
+
+    useEffect(() => {
+        if (props.page === 3) setActive(true);
+    }, [props.page])
+
     const HandlePage = () => props.setPage(3);
 
     return (
-        <DrinksWrap onClick={HandlePage}>
+        <DrinksWrap 
+            onClick={HandlePage}
+            active={active} >
             <ImgBox>
                 <Img src={DrinkIMG} />
             </ImgBox>

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 
 import { TimeWrap } from './timeStyles';
 import TimeIMG from '../../../assets/calendar.svg';
@@ -11,10 +11,18 @@ import {
 } from '../navStyles';
 
 function Time (props) {
+    const [active, setActive] = useState(false);
+
+    useEffect(() => {
+        if (props.page === 2) setActive(true);
+    }, [props.page])
+
     const HandlePage = () => props.setPage(2);
 
     return (
-        <TimeWrap onClick={HandlePage}>
+        <TimeWrap
+            onClick={HandlePage}
+            active={active} >
             <ImgBox>
                 <Img src={TimeIMG} />
             </ImgBox>

@@ -8,4 +8,6 @@ export const DetailsWrap = styled.div`
     flex-flow: column nowrap;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
+    border-bottom: 3px solid ${props => props.active ? colors.primary : `#f5f5f5`};
 `;
