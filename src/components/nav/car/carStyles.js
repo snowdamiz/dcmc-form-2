@@ -9,5 +9,9 @@ export const CarWrap = styled.div`
     justify-content: center;
     align-items: center;
     cursor: pointer;
-    border-bottom: 3px solid ${props => props.active ? colors.primary : `#f5f5f5`};
+    border-bottom: 4px solid ${props => props.active ? colors.primary : `#f5f5f5`};
+
+    ${media.tablet} {
+        border-bottom: 5px solid ${props => props.active ? colors.primary : `#f5f5f5`};
+    }
 `;

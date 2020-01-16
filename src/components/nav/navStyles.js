@@ -3,15 +3,19 @@ import { fonts, colors, media } from '../../vars';
 
 export const NavWrap = styled.nav`
     width: 100%;
-    height: 76px;
+    height: 60px;
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-around;
     align-items: center;
     background-color: #f5f5f5;
 
+    ${media.phone} {
+        height: 76px;
+    }
+
     ${media.tablet} {
-        height: 90px;
+        height: 80px;
     }
 `;
 
@@ -19,6 +23,10 @@ export const NavWrap = styled.nav`
 
         export const Img = styled.img`
             width: 22px;
+
+            ${media.phone} {
+                width: 24px;
+            }
 
             ${media.tablet} {
                 width: 26px;
@@ -31,6 +39,11 @@ export const NavWrap = styled.nav`
         flex-flow: column nowrap;
         justify-content: center;
         align-items: center;
+        display: none;
+
+        // ${media.phone} {
+        //     display: flex;
+        // }
     `;
 
         export const NavLinkTitle = styled.p`
