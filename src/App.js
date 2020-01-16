@@ -32,7 +32,13 @@ function App() {
     case(4):
       return <Details
               page={page}
-              setPage={setPage}  />
+              setPage={setPage}
+              name={name}
+              setName={setName}
+              email={email}
+              setEmail={setEmail}
+              phone={phone}
+              setPhone={setPhone} />
   }
 }
 
