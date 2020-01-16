@@ -4,7 +4,7 @@ import { colors, fonts, media } from '../../vars';
 export const HeaderWrap = styled.header`
     width: 100%;
     border-bottom: 3px solid ${colors.dark};
-    background-color: ${colors.white};
+    background-color: ${colors.dark};
     height: 48px;
     display: flex;
     flex-flow: row nowrap;
@@ -13,18 +13,20 @@ export const HeaderWrap = styled.header`
 
     ${media.tablet} {
         height: 55px;
+        justify-content: center;
     }
 `;
 
     export const H1 = styled.h1`
-        color: ${colors.dark};
-        font-size: 20px;
+        color: ${colors.white};
+        font-size: 18px;
         font-family: ${fonts.heading};
         font-weight: 600;
         margin-left: 14px;
 
         ${media.tablet} {
-            font-size: 22px;
+            font-size: 20px;
+            margin-left: 0;
         }
     `;
 

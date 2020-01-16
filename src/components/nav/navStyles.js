@@ -8,7 +8,7 @@ export const NavWrap = styled.nav`
     flex-flow: row nowrap;
     justify-content: space-around;
     align-items: center;
-    background-color: #f4f4f4;
+    background-color: #f5f5f5;
 
     ${media.tablet} {
         height: 90px;

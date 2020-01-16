@@ -9,6 +9,5 @@ export const CarWrap = styled.div`
     justify-content: center;
     align-items: center;
     cursor: pointer;
-    border-bottom: 3px solid ${colors.primary};
     border-bottom: 3px solid ${props => props.active ? colors.primary : `#f5f5f5`};
 `;
