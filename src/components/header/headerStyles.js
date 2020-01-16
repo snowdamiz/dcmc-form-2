@@ -4,15 +4,15 @@ import { colors, fonts, media } from '../../vars';
 export const HeaderWrap = styled.header`
     width: 100%;
     border-bottom: 3px solid ${colors.dark};
-    background-color: ${colors.dark};
-    height: 48px;
+    background-color: ${colors.green};
+    height: 56px;
     display: flex;
     flex-flow: row nowrap;
     justify-content: flex-start;
     align-items: center;
 
     ${media.tablet} {
-        height: 55px;
+        height: 60px;
         justify-content: center;
     }
 `;
