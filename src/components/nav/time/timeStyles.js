@@ -11,6 +11,15 @@ export const TimeWrap = styled.div`
     cursor: pointer;
     border-bottom: 4px solid ${props => props.active ? colors.primary : `#f5f5f5`};
 
+    &:hover {
+        background-color: #f1f1f1;
+        border-bottom: 4px solid ${props => props.active ? colors.primary : `#f1f1f1`};
+
+        ${media.tablet} {
+            border-bottom: 5px solid ${props => props.active ? colors.primary : `#f1f1f1`};
+        }
+    }
+
     ${media.tablet} {
         border-bottom: 5px solid ${props => props.active ? colors.primary : `#f5f5f5`};
     }

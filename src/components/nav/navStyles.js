@@ -9,6 +9,7 @@ export const NavWrap = styled.nav`
     justify-content: space-around;
     align-items: center;
     background-color: #f5f5f5;
+    margin-top: 2px;
 
     ${media.phone} {
         height: 76px;
