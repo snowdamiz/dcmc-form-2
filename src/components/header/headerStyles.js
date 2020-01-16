@@ -3,18 +3,16 @@ import { colors, fonts, media } from '../../vars';
 
 export const HeaderWrap = styled.header`
     width: 100%;
-    border-bottom: 4px solid ${colors.primary};
+    border-bottom: 3px solid ${colors.dark};
+    background-color: ${colors.white};
     height: 48px;
     display: flex;
     flex-flow: row nowrap;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: center;
 
-    div {
-        width: 30px;
-        height: 30px;
-        border: 1px solid gray;
-        margin-right: 14px;
+    ${media.tablet} {
+        height: 55px;
     }
 `;
 
@@ -24,6 +22,10 @@ export const HeaderWrap = styled.header`
         font-family: ${fonts.heading};
         font-weight: 600;
         margin-left: 14px;
+
+        ${media.tablet} {
+            font-size: 22px;
+        }
     `;
 
     export const Close = styled.img`

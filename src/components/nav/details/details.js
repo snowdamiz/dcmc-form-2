@@ -1,6 +1,7 @@
 import React from 'react'
 
 import { DetailsWrap } from './detailsStyles';
+import DetailsIMG from '../../../assets/user.svg';
 import { 
     ImgBox,
     Img,
@@ -15,11 +16,11 @@ function Details (props) {
     return (
         <DetailsWrap onClick={HandlePage}>
             <ImgBox>
-                <Img src="#" />
+                <Img src={DetailsIMG} />
             </ImgBox>
             <TextBox>
-                <NavLinkTitle></NavLinkTitle>
-                <NavLinkDesc></NavLinkDesc>
+                <NavLinkTitle>Step Four</NavLinkTitle>
+                <NavLinkDesc>Book Now</NavLinkDesc>
             </TextBox>
         </DetailsWrap>
     )

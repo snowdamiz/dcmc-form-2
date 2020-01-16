@@ -1,6 +1,7 @@
 import React from 'react';
 
 import { DrinksWrap } from './drinksStyles';
+import DrinkIMG from '../../../assets/drink.svg';
 import { 
     ImgBox,
     Img,
@@ -15,11 +16,11 @@ function Drinks (props) {
     return (
         <DrinksWrap onClick={HandlePage}>
             <ImgBox>
-                <Img src="#" />
+                <Img src={DrinkIMG} />
             </ImgBox>
             <TextBox>
-                <NavLinkTitle></NavLinkTitle>
-                <NavLinkDesc></NavLinkDesc>
+                <NavLinkTitle>Step Three</NavLinkTitle>
+                <NavLinkDesc>Beverage</NavLinkDesc>
             </TextBox>
         </DrinksWrap>
     )

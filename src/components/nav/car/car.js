@@ -1,6 +1,7 @@
 import React from 'react';
 
 import { CarWrap } from './carStyles';
+import CarIMG from '../../../assets/car.svg';
 import { 
     ImgBox,
     Img,
@@ -15,11 +16,11 @@ function Car (props) {
     return (
         <CarWrap onClick={HandlePage}>
             <ImgBox>
-                <Img src="#" />
+                <Img src={CarIMG} />
             </ImgBox>
             <TextBox>
-                <NavLinkTitle></NavLinkTitle>
-                <NavLinkDesc></NavLinkDesc>
+                <NavLinkTitle>Step One</NavLinkTitle>
+                <NavLinkDesc>Vehicle</NavLinkDesc>
             </TextBox>
         </CarWrap>
     )

@@ -10,4 +10,11 @@ export const VehicleWrap = styled.section`
     flex-flow: column nowrap;
     justify-content: flex-start;
     align-items: center;
+
+    ${media.tablet} {
+        width: 560px;
+        max-height: 800px;
+        margin: 0px auto;
+        position: relative;
+    }
 `;

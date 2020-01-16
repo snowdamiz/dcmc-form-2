@@ -3,7 +3,8 @@ import Header from '../header/header';
 import Nav from '../nav/nav'; 
 
 import {
-    DetailsWrap
+    DetailsWrap,
+    SubmitBtn
 } from './detailsStyles';
 
 function Details (props) {
@@ -13,6 +14,7 @@ function Details (props) {
             <Nav
                 page={props.page}
                 setPage={props.setPage} />
+            <SubmitBtn>Submit</SubmitBtn>
         </DetailsWrap>
     )
 }

@@ -1,6 +1,7 @@
 import React from 'react';
 
 import { TimeWrap } from './timeStyles';
+import TimeIMG from '../../../assets/calendar.svg';
 import { 
     ImgBox,
     Img,
@@ -15,11 +16,11 @@ function Time (props) {
     return (
         <TimeWrap onClick={HandlePage}>
             <ImgBox>
-                <Img src="#" />
+                <Img src={TimeIMG} />
             </ImgBox>
             <TextBox>
-                <NavLinkTitle></NavLinkTitle>
-                <NavLinkDesc></NavLinkDesc>
+                <NavLinkTitle>Step Two</NavLinkTitle>
+                <NavLinkDesc>Date & Time</NavLinkDesc>
             </TextBox>        
         </TimeWrap>
     )

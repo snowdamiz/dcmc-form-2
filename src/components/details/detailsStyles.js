@@ -11,3 +11,11 @@ export const DetailsWrap = styled.section`
     justify-content: flex-start;
     align-items: center;
 `;
+
+    export const SubmitBtn = styled.button`
+        width: 120px;
+        height: 30px;
+        border: 1px solid red;
+        bottom: 40px;
+        position: absolute;
+    `;

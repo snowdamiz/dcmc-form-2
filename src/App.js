@@ -14,7 +14,7 @@ function App() {
   const [beverage, setBeverage] = useState("");
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
-  const [phone, setPhone]= useState("");
+  const [phone, setPhone] = useState("");
 
   switch (page) {
     case(1):

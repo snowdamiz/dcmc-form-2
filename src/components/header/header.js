@@ -11,7 +11,7 @@ function Header () {
     return (
         <HeaderWrap>
             <H1>VIP Test Drive</H1>
-            <Close src={CloseBtn} />
+            {/* <Close src={CloseBtn} /> */}
         </HeaderWrap>
     )
 }
