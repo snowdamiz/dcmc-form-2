@@ -11,7 +11,7 @@ import {
 
 function Details (props) {
 
-    const handleName = (e) => props.setName(e.target.value);
+    const handleName = (e) =>  props.setName(e.target.value);
     const handleEmail = (e) => props.setEmail(e.target.value);
     const handlePhone = (e) => props.setPhone(e.target.value);
 
@@ -38,7 +38,7 @@ function Details (props) {
                     value={props.phone}
                     onChange={handlePhone} />
             </DetailsBox>
-            <SubmitBtn>Submit</SubmitBtn>
+            <SubmitBtn onClick={props.submit}>Submit</SubmitBtn>
         </DetailsWrap>
     )
 }
