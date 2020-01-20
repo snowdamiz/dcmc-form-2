@@ -39,7 +39,7 @@ function Datetime (props) {
                     tileClassName="cal_tile" />
 
                 <TimesBox>
-                    {errs.includes(21) ? <ErrorMSG>Please Select a Time</ErrorMSG>: null }
+                    {errs.includes(21) ? <ErrorMSG className="primary">Please Select a Time</ErrorMSG>: null }
                     <TimesSec>
                         <TimeBtn 
                             value="10:00AM"

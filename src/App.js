@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import Papa from 'papaparse';
 import './reset.css';
 
 import Vehicle from './components/vehicle/vehicle';
@@ -8,7 +9,8 @@ import Details from './components/details/details';
 import NextBtn from './components/nextbtn/nextbtn';
 
 function App() {
-  const [page, setPage] = useState(4);
+  const [rows, setRows] = useState([]);
+  const [page, setPage] = useState(1);
   const [productID, setProductID] = useState("");
   const [car, setCar] = useState("");
   const [date, setDate] = useState("");
@@ -18,6 +20,81 @@ function App() {
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
   const [errors, setErrors] = useState([]);
+  const [makes, setMakes] = useState([]);
+  const [models, setModels] = useState([]);
+  const [years, setYears] = useState([]);
+
+  let data = [];
+
+  useEffect(() => {
+      function getData() {
+        const csvFile = require('./dcm.csv');
+        Papa.parse(csvFile, {
+          header: true,
+          download: true,
+          skipEmptyLines: true,
+          complete: (res) => {
+            setRows(res.data);
+            data = res.data;
+          }
+        });
+      }
+
+      getData();
+      sortData()
+  }, [page])
+
+  
+  const sortData = () => {
+    setTimeout(() => {
+      const getMakes = () => {
+        let makes = [];
+        let sortedMakes = [];
+
+        for (let i = 0; i < data.length; i++) {
+          let carMake = data[i];
+          makes.push(carMake.make);
+        }
+
+        sortedMakes = [...new Set(makes)];
+        setMakes(sortedMakes);
+        console.log(sortedMakes);
+      }
+
+      const getModels = () => {
+        let models = [];
+        let sortedModels = [];
+
+        for (let i = 0; i < data.length; i++) {
+          let carModel = data[i];
+          models.push(carModel.model);
+        }
+
+        sortedModels = [...new Set(models)];
+        setModels(sortedModels);
+        console.log(sortedModels);
+      }
+
+      const getYears = () => {
+        let years = [];
+        let sortedYears = [];
+
+        for (let i = 0; i < data.length; i++) {
+          let carYear = data[i];
+          years.push(carYear.year);
+        }
+
+        sortedYears = [...new Set(years)];
+        setYears(sortedYears);
+        console.log(sortedYears);
+      }
+
+      getMakes();
+      getModels();
+      getYears();
+    }, 500)
+  }
+
 
   const submit = () => {
     let err = [];

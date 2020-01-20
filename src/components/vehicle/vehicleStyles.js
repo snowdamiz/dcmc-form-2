@@ -20,3 +20,20 @@ export const VehicleWrap = styled.section`
         margin-top: 20px;
     }
 `;
+
+    export const VehicleBox = styled.section`
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        align-items: center;
+        width: 270px;
+        margin-top: 30px;
+
+        ${media.phone} {
+            width: 340px;
+        }
+        
+        ${media.tablet} {
+            width: 400px;
+        }
+    `;

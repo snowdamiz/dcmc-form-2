@@ -4,7 +4,8 @@ import Nav from '../nav/nav';
 import NextBtn from '../nextbtn/nextbtn';
 
 import {
-    VehicleWrap
+    VehicleWrap,
+    VehicleBox,
 } from './vehicleStyles';
 
 function Vehicle (props) {
@@ -14,6 +15,7 @@ function Vehicle (props) {
             <Nav
                 page={props.page}
                 setPage={props.setPage}/>
+
             <NextBtn
                 page={props.page}
                 setPage={props.setPage} />

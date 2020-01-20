@@ -173,15 +173,11 @@ export const DatetimeWrap = styled.section`
             `;
 
     export const ErrorMSG = styled.span`
-        &:nth-child(2) {
-            margin: 16px 0 0 0;
-        }
-
         font-size: 13px;
         font-family: ${fonts.text};
         color: red;
         text-align: left;
         align-self: flex-start;
         padding-bottom: 8px;
-        // margin: 16px 0 0 0;
+        margin: 8px 0 0 0;
     `;
