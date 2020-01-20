@@ -8,9 +8,9 @@ import Details from './components/details/details';
 import NextBtn from './components/nextbtn/nextbtn';
 
 function App() {
-  const [page, setPage] = useState(3);
+  const [page, setPage] = useState(2);
   const [productID, setProductID] = useState("");
-  const [date, setDate] = useState("");
+  const [date, setDate] = useState(new Date());
   const [time, setTime] = useState("");
   const [beverage, setBeverage] = useState("");
   const [name, setName] = useState("");
@@ -35,10 +35,10 @@ function App() {
       if (!regexEmail.test(email)) err.push(72);
 
       if (phone.length != 10) err.push(81);
-      if (!regexName.test(phone)) err.push(82);
+      if (!regexNumber.test(phone)) err.push(82);
 
       let newErrs = errors.concat(err);
-      setErrors(...errors, newErrs);
+      setErrors(newErrs);
     }
 
     validateName();

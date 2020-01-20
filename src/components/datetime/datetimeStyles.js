@@ -20,3 +20,20 @@ export const DatetimeWrap = styled.section`
         margin-top: 20px;
     }
 `;
+
+    export const DatetimeBox = styled.section`
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        align-items: center;
+        width: 300px;
+        margin-top: 40px;
+
+        ${media.phone} {
+            width: 360px;
+        }
+        
+        ${media.tablet} {
+            width: 500px;
+        }
+    `;
