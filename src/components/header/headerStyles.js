@@ -3,7 +3,7 @@ import { colors, fonts, media } from '../../vars';
 
 export const HeaderWrap = styled.header`
     width: 100%;
-    border-bottom: 3px solid ${colors.dark};
+    border-bottom: 3px solid ${colors.green};
     background-color: ${colors.green};
     height: 56px;
     display: flex;

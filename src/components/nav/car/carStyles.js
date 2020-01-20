@@ -10,6 +10,7 @@ export const CarWrap = styled.div`
     align-items: center;
     cursor: pointer;
     border-bottom: 4px solid ${props => props.active ? colors.primary : `#f2f2f2`};
+    background-color: #f2f2f2;
     
     &:hover {
         background-color: #EDEDED;

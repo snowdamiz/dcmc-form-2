@@ -18,32 +18,23 @@ function App() {
   const [phone, setPhone] = useState("");
   const [errors, setErrors] = useState([]);
 
-  const submit = (e) => {
-    // e.preventDefault();
+  const submit = () => {
+    let err = [];
 
-    function validateName() {
-      let err = [];
+    const regexName = /^[a-zA-Z\s]*$/;
+    const regexEmail = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+    const regexNumber = /^\d+$/;
 
-      const regexName = /^[a-zA-Z\s]*$/;
-      const regexEmail = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
-      const regexNumber = /^\d+$/;
+    if (name.length < 5 || name.length > 30) err.push(61);
+    if (!regexName.test(name)) err.push(62);
 
-      if (name.length < 5 || name.length > 30) err.push(61);
-      if (!regexName.test(name)) err.push(62);
+    if (email.length < 10 || email.length > 30) err.push(71);
+    if (!regexEmail.test(email)) err.push(72);
 
-      if (email.length < 10 || email.length > 30) err.push(71);
-      if (!regexEmail.test(email)) err.push(72);
+    if (phone.length != 10) err.push(81);
+    if (!regexNumber.test(phone)) err.push(82);
 
-      if (phone.length != 10) err.push(81);
-      if (!regexNumber.test(phone)) err.push(82);
-
-      let newErrs = errors.concat(err);
-      setErrors(newErrs);
-    }
-
-    validateName();
-    // validateEmail();
-    // validatePhone();
+    setErrors(err);
 }
 
   switch (page) {
