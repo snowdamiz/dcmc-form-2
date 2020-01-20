@@ -48,13 +48,24 @@ export const DetailsWrap = styled.section`
             color: gray;
             padding: 0 10px;
         `;
-
-    export const SubmitBtn = styled.button`
-        width: 140px;
-        height: 40px;
-        border: none;
-        background-color: ${colors.green};
-        bottom: 30px;
+    
+    export const SubmitBox = styled.section`
+        width: 100%;
+        padding: 30px 0;
+        background-color: #f5f5f5;
         position: absolute;
-        color: ${colors.white};
+        bottom: 0;
+        display: flex;
+        flex-flow: colum nowrap;
+        justify-content: center;
+        align-items: center;
     `;
+
+        export const SubmitBtn = styled.button`
+            width: 140px;
+            height: 40px;
+            border: none;
+            background-color: ${colors.green};
+            bottom: 30px;
+            color: ${colors.white};
+        `;

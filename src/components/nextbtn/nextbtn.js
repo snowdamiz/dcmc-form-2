@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { NextButton } from './nextbtnStyles';
+import { NextBox, NextButton } from './nextbtnStyles';
 
 function NextBtn (props) {
     const HandlePage = () => {
@@ -8,7 +8,9 @@ function NextBtn (props) {
     }
 
     return (
-        <NextButton onClick={HandlePage}>Next Step</NextButton>
+        <NextBox>
+            <NextButton onClick={HandlePage}>Next Step</NextButton>
+        </NextBox>
     )
 }
 

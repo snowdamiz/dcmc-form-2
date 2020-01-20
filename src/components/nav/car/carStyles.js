@@ -9,18 +9,18 @@ export const CarWrap = styled.div`
     justify-content: center;
     align-items: center;
     cursor: pointer;
-    border-bottom: 4px solid ${props => props.active ? colors.primary : `#f5f5f5`};
+    border-bottom: 4px solid ${props => props.active ? colors.primary : `#f2f2f2`};
     
     &:hover {
-        background-color: #f1f1f1;
-        border-bottom: 4px solid ${props => props.active ? colors.primary : `#f1f1f1`};
+        background-color: #EDEDED;
+        border-bottom: 4px solid ${props => props.active ? colors.primary : `#EDEDED`};
 
         ${media.tablet} {
-            border-bottom: 5px solid ${props => props.active ? colors.primary : `#f1f1f1`};
+            border-bottom: 5px solid ${props => props.active ? colors.primary : `#EDEDED`};
         }
     }
 
     ${media.tablet} {
-        border-bottom: 5px solid ${props => props.active ? colors.primary : `#f5f5f5`};
+        border-bottom: 5px solid ${props => props.active ? colors.primary : `#f2f2f2`};
     }
 `;

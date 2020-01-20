@@ -8,7 +8,7 @@ export const NavWrap = styled.nav`
     flex-flow: row nowrap;
     justify-content: space-around;
     align-items: center;
-    background-color: #f5f5f5;
+    background-color: #f2f2f2;
     margin-top: 2px;
 
     ${media.phone} {

@@ -6,6 +6,7 @@ import {
     DetailsWrap,
     DetailsBox,
     Input,
+    SubmitBox,
     SubmitBtn
 } from './detailsStyles';
 
@@ -37,8 +38,10 @@ function Details (props) {
                     placeholder="Phone"
                     value={props.phone}
                     onChange={handlePhone} />
-            </DetailsBox>
-            <SubmitBtn onClick={props.submit}>Submit</SubmitBtn>
+            </DetailsBox>  
+            <SubmitBox>
+                <SubmitBtn onClick={props.submit}>Submit</SubmitBtn>
+            </SubmitBox>
         </DetailsWrap>
     )
 }
