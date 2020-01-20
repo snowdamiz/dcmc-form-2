@@ -45,24 +45,62 @@ export const BeverageWrap = styled.section`
             justify-content: space-between;
             align-items: center;
             margin-bottom: 16px;
+
+            // ACTIVE CLASS FOR SELECTED ITEM
+            .active {
+                border: 6px solid ${colors.green};
+                background-color: ${colors.green};
+                ${media.tablet} {
+                    border: 8px solid ${colors.green};
+                }
+            }
         `;
 
             export const Item = styled.div`
-                width: 44%;
-                border: 1px solid blue;
+                width: 40%;
+                // border: 1px solid blue;
                 display: flex;
                 flex-flow: column nowrap;
                 justify-content: center;
                 align-items: center;
+                box-shadow: 0px 0px 10px #CDCDCD;
+                border: 6px solid transparent;
+                cursor: pointer;
+
+                ${media.tablet} {
+                    border: 8px solid transparent;
+                }
+
+                &:hover {
+                    border: 6px solid ${colors.green};
+                    background-color: ${colors.green};
+
+                    ${media.tablet} {
+                        border: 8px solid ${colors.green};
+                    }
+
+                    .heading {
+                        font-weight: 800;
+                        color: ${colors.white};
+                        text-shadow: 0px 0px 4px #626262;
+                    }
+                }
+
+                .activeHeading {
+                    font-weight: bold;
+                    color: ${colors.white};
+                    text-shadow: 0px 0px 4px #626262;
+                }
             `;
 
                 export const Heading = styled.h3`
-                    font-family: ${fonts.heading};
+                    font-family: ${fonts.text};
                     font-size: 15px;
-                    padding: 10px;
+                    padding: 14px;
+                    font-weight: 600;
                 `;
 
                 export const IMG = styled.img`
-                    border: 1px solid green;
+                    // border: 1px solid green;
                     width: 100%;
                 `;
