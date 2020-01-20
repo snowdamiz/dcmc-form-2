@@ -14,11 +14,13 @@ import {
    Section,
    Item,
    Heading,
-   IMG
+   IMG,
+   ErrorMSG,
 } from './beverageStyles';
 
 function Beverage (props) {
     const bev = ['coffee', 'water', 'tea', 'kombucha'];
+    const errs = props.errors;
 
     function handleBev(id, e) {
         props.setBeverage(id);
@@ -31,6 +33,7 @@ function Beverage (props) {
                 page={props.page}
                 setPage={props.setPage} />
             <BeverageBox>
+                {errs.includes(20) ? <ErrorMSG>Please Selecet a Refreshment</ErrorMSG> : null }
                 <Section>
                     <Item
                         id={bev[0]}

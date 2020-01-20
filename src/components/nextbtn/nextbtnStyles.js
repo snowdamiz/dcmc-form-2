@@ -3,7 +3,7 @@ import { fonts, colors, media } from '../../vars';
 
 export const NextBox = styled.section`
     width: 100%;
-    padding: 30px 0;
+    padding: 20px 0;
     background-color: #f2f2f2;
     position: absolute;
     bottom: 0;

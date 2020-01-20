@@ -27,7 +27,7 @@ export const BeverageWrap = styled.section`
         justify-content: center;
         align-items: center;
         width: 270px;
-        margin-top: 40px;
+        margin-top: 30px;
 
         ${media.phone} {
             width: 340px;
@@ -104,3 +104,13 @@ export const BeverageWrap = styled.section`
                     // border: 1px solid green;
                     width: 100%;
                 `;
+
+    export const ErrorMSG = styled.span`
+        font-size: 13px;
+        font-family: ${fonts.text};
+        color: red;
+        text-align: left;
+        align-self: flex-start;
+        padding-bottom: 8px;
+        margin: 6px 0 0 0;
+    `;

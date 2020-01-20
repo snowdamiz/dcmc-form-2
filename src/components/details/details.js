@@ -5,6 +5,7 @@ import Nav from '../nav/nav';
 import {
     DetailsWrap,
     DetailsBox,
+    ErrorMSG,
     Input,
     SubmitBox,
     SubmitBtn
@@ -16,6 +17,8 @@ function Details (props) {
     const handleEmail = (e) => props.setEmail(e.target.value);
     const handlePhone = (e) => props.setPhone(e.target.value);
 
+    const errs = props.errors;
+
     return (
         <DetailsWrap>
             <Header />
@@ -23,16 +26,21 @@ function Details (props) {
                 page={props.page}
                 setPage={props.setPage} />
             <DetailsBox>
+                {errs.includes(40) ? <ErrorMSG>Enter a Valid Name</ErrorMSG> : null }
                 <Input 
                     type="text"
                     placeholder="Name"
                     value={props.name}
                     onChange={handleName} />
+
+                {errs.includes(41) ? <ErrorMSG>Enter a Valid Email Address</ErrorMSG> : null }
                 <Input
                     type="text"
                     placeholder="Email"
                     value={props.email}
                     onChange={handleEmail} />
+
+                {errs.includes(42) ? <ErrorMSG>Enter a Valid Phone Number</ErrorMSG> : null }
                 <Input
                     type="text"
                     placeholder="Phone"

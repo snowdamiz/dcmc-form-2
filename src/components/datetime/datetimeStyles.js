@@ -27,7 +27,7 @@ export const DatetimeWrap = styled.section`
         justify-content: center;
         align-items: center;
         width: 300px;
-        margin-top: 40px;
+        margin-top: 30px;
 
         ${media.phone} {
             width: 360px;
@@ -42,6 +42,7 @@ export const DatetimeWrap = styled.section`
             border: none;
             box-shadow: 0px 0px 10px #CDCDCD;
             width: 100%;
+            margin-bottom: 15px;
 
             // CALENDAR NAVIGATION
             .react-calendar__navigation {
@@ -127,38 +128,60 @@ export const DatetimeWrap = styled.section`
 
     export const TimesBox = styled.section`
         width: 100%;
-        margin-top: 20px;
         display: flex;
-        flex-flow: row nowrap;
-        justify-content: space-between;
+        flex-flow: column nowrap;
+        justify-content: center;
         align-items: center;
-
-        .activeTime {
-            border: 1px solid ${colors.green};
-            background-color: ${colors.green};
-            color: ${colors.white};
-            font-weight: 800;
-        }
     `;
 
-        export const TimeBtn = styled.button`
-            width: 30%;
-            border: 1px solid ${colors.gray};
-            height: 36px;
-            padding-top: 2px;
-            font-family: ${fonts.text};
-            font-size: 13px;
-            font-weight: 700;
-            color: ${colors.dark};
+        export const TimesSec = styled.section`
+            width: 100%;
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
 
-            ${media.tablet} {
-                height: 40px;
-            }
-
-            &:hover {
+            .activeTime {
                 border: 1px solid ${colors.green};
                 background-color: ${colors.green};
                 color: ${colors.white};
                 font-weight: 800;
             }
         `;
+
+            export const TimeBtn = styled.button`
+                width: 30%;
+                border: 1px solid ${colors.gray};
+                height: 36px;
+                padding-top: 2px;
+                font-family: ${fonts.text};
+                font-size: 13px;
+                font-weight: 700;
+                color: ${colors.dark};
+
+                ${media.tablet} {
+                    height: 40px;
+                }
+
+                &:hover {
+                    border: 1px solid ${colors.green};
+                    background-color: ${colors.green};
+                    color: ${colors.white};
+                    font-weight: 800;
+                }
+            `;
+
+    export const ErrorMSG = styled.span`
+        &:nth-child(2) {
+            margin: 16px 0 0 0;
+        }
+
+        font-size: 13px;
+        font-family: ${fonts.text};
+        color: red;
+        text-align: left;
+        align-self: flex-start;
+        padding-bottom: 8px;
+        // margin: 16px 0 0 0;
+    `;

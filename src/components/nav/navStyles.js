@@ -12,11 +12,11 @@ export const NavWrap = styled.nav`
     margin-top: 2px;
 
     ${media.phone} {
-        height: 76px;
+        height: 70px;
     }
 
     ${media.tablet} {
-        height: 80px;
+        height: 76px;
     }
 `;
 
