@@ -34,6 +34,131 @@ export const DatetimeWrap = styled.section`
         }
         
         ${media.tablet} {
-            width: 500px;
+            width: 440px;
+        }
+
+        // CALENDAR
+        .react-calendar {
+            border: none;
+            box-shadow: 0px 0px 10px #CDCDCD;
+            width: 100%;
+
+            // CALENDAR NAVIGATION
+            .react-calendar__navigation {
+                margin-top: 14px;
+                border: none;
+                height: 30px;
+
+                .react-calendar__navigation__label {
+                    background-color: ${colors.white};
+                    border: none;
+                    font-size: 15px;
+                    color: ${colors.primaryDark};
+                    font-family: ${fonts.heading};
+                    font-weight: 800;
+                }
+
+                .react-calendar__navigation__arrow {
+                    width: 30px;
+                    height: 30px;
+                    background-color: ${colors.white};
+                    color: ${colors.darkGray};
+                    border: none;
+                    font-size: 16px;
+                }
+            }
+
+            // MONTH VIEW - HEADER
+            .react-calendar__month-view {
+                .react-calendar__month-view__weekdays {
+                    height: 50px;
+                    background-color: #f2f2f2;
+
+                    .react-calendar__month-view__weekdays__weekday {
+                        text-align: center;
+                        display: flex;
+                        flex-flow: column nowrap;
+                        justify-content: center;
+                        align-items: center;
+
+                        abbr {
+                            text-decoration: none;
+                            font-family: ${fonts.text};
+                        }
+                    }
+                }
+
+                // TILES
+                .react-calendar__month-view__days {
+                    .cal_tile {
+                        background-color: ${colors.white};
+                        height: 60px;
+
+                        ${media.tablet} {
+                            height: 60x;
+                            font-size: 16px;
+                        }
+                    }
+
+                    .react-calendar__month-view__days__day--weekend {
+                        color: ${colors.primaryDark};
+                    }
+
+                    .react-calendar__tile--active {
+                        color: ${colors.white};
+                        background-color: ${colors.green};
+                    }
+
+                    .react-calendar__tile {
+                        border: none;
+                        height: 42px;
+                        font-size: 14px;
+                        font-family: ${fonts.text};
+                        
+                        ${media.tablet} {
+                            height: 48px;
+                            font-size: 16px;
+                        }
+                    }
+                }
+            }
         }
     `;
+
+    export const TimesBox = styled.section`
+        width: 100%;
+        margin-top: 20px;
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        align-items: center;
+
+        .activeTime {
+            border: 1px solid ${colors.green};
+            background-color: ${colors.green};
+            color: ${colors.white};
+            font-weight: 800;
+        }
+    `;
+
+        export const TimeBtn = styled.button`
+            width: 30%;
+            border: 1px solid ${colors.gray};
+            height: 36px;
+            padding-top: 2px;
+            font-family: ${fonts.text};
+            font-size: 13px;
+            font-weight: 700;
+            color: ${colors.dark};
+
+            ${media.tablet} {
+                height: 40px;
+            }
+
+            &:hover {
+                border: 1px solid ${colors.green};
+                background-color: ${colors.green};
+                color: ${colors.white};
+                font-weight: 800;
+            }
+        `;
