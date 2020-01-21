@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import Papa from 'papaparse';
-import axios from 'axios';
 import './reset.css';
 
 import Vehicle from './components/vehicle/vehicle';
@@ -32,21 +31,16 @@ function App() {
 
   useEffect(() => {
       function getData() {
-        // const csvFile = require('http://gromarketing.a2hosted.com/dcm.csv');
-        axios.get('http://gromarketing.a2hosted.com/dcm.csv')
-          .then((data) => {
-            Papa.parse(data, {
-              header: true,
-              download: true,
-              skipEmptyLines: true,
-              complete: (res) => {
-                setRows(res.data);
-                data = res.data;
-              }
-            });
-          })
-        // const csvFile = fetch('http://gromarketing.a2hosted.com/dcm.csv');
-
+        const csvFile = require('./dcm.csv');
+        Papa.parse(csvFile, {
+          header: true,
+          download: true,
+          skipEmptyLines: true,
+          complete: (res) => {
+            setRows(res.data);
+            data = res.data;
+          }
+        });
       }
 
       getData();
