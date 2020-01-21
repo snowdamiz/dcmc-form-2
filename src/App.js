@@ -12,17 +12,20 @@ function App() {
   const [rows, setRows] = useState([]);
   const [page, setPage] = useState(1);
   const [productID, setProductID] = useState("");
-  const [car, setCar] = useState("");
+  const [errors, setErrors] = useState([]);
+
   const [date, setDate] = useState("");
   const [time, setTime] = useState("");
   const [beverage, setBeverage] = useState("");
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
-  const [errors, setErrors] = useState([]);
+  
   const [makes, setMakes] = useState([]);
   const [models, setModels] = useState([]);
   const [years, setYears] = useState([]);
+  const [cars, setCars] = useState([]);
+  const [sbModel, setSbModel] = useState([]);
 
   let data = [];
 
@@ -42,7 +45,7 @@ function App() {
 
       getData();
       sortData()
-  }, [page])
+  }, [cars])
 
   
   const sortData = () => {
@@ -58,43 +61,75 @@ function App() {
 
         sortedMakes = [...new Set(makes)];
         setMakes(sortedMakes);
-        console.log(sortedMakes);
       }
-
-      const getModels = () => {
-        let models = [];
-        let sortedModels = [];
-
-        for (let i = 0; i < data.length; i++) {
-          let carModel = data[i];
-          models.push(carModel.model);
-        }
-
-        sortedModels = [...new Set(models)];
-        setModels(sortedModels);
-        console.log(sortedModels);
-      }
-
-      const getYears = () => {
-        let years = [];
-        let sortedYears = [];
-
-        for (let i = 0; i < data.length; i++) {
-          let carYear = data[i];
-          years.push(carYear.year);
-        }
-
-        sortedYears = [...new Set(years)];
-        setYears(sortedYears);
-        console.log(sortedYears);
-      }
-
       getMakes();
-      getModels();
-      getYears();
     }, 500)
   }
 
+  const selectMake = (el) => {
+    const original = [...rows];
+    let cars = [];
+    let models = [];
+    let sortedCars = [];
+    let sortedModels = [];
+    
+    for (let i = 0; i < original.length; i++) {
+      if (original[i].make === el) {
+        cars.push(original[i]);
+        models.push(original[i].model);
+      }
+    }
+
+    sortedCars = [...new Set(cars)];
+    sortedModels = [... new Set(models)];
+
+    setCars(sortedCars);
+    setModels(sortedModels);
+    setYears([]);
+
+    // console.log(cars[0].vin);
+    // console.log(cars);
+  }
+
+  const selectModel = (el) => {
+    const original = [...cars];
+    let vehicles = [];
+    let years = [];
+    let sortedVehicles = [];
+    let sortedYears = [];
+    
+    for (let i = 0; i < original.length; i++) {
+      if (original[i].model === el) {
+        vehicles.push(original[i]);
+        years.push(original[i].year);
+      }
+    }
+
+    sortedVehicles = [...new Set(vehicles)];
+    sortedYears = [...new Set(years)];
+
+    setSbModel(sortedVehicles);
+    setYears(sortedYears);
+
+    // console.log(cars);
+  }
+
+  const selectYear = (el) => {
+    const original = [...sbModel];
+    let vehicles = [];
+    let sortedVehicles = [];
+
+    for (let i = 0; i < original.length; i++) {
+      if (original[i].year === el) {
+        vehicles.push(original[i]);
+      }
+    }
+
+    sortedVehicles = [...new Set(vehicles)];
+    setCars(sortedVehicles);
+
+    // console.log(cars);
+  }
 
   const submit = () => {
     let err = [];
@@ -119,6 +154,15 @@ function App() {
       return <Vehicle 
               page={page}
               setPage={setPage}
+              rows={rows}
+              makes={makes}
+              models={models}
+              years={years}
+              cars={cars}
+              selectMake={selectMake}
+              selectModel={selectModel}
+              selectYear={selectYear}
+              sbModel={sbModel}
               productID={productID}
               setProductID={setProductID}
               errors={errors}
