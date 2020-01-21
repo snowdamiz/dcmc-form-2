@@ -20,6 +20,14 @@ export const DetailsWrap = styled.section`
         position: relative;
         margin-top: 20px;
     }
+
+    ${media.largeTablet} {
+        width: 800px;
+    }
+
+    ${media.modern} {
+        width: 1300px;
+    }
 `;
 
     export const DetailsBox = styled.section`
@@ -36,6 +44,16 @@ export const DetailsWrap = styled.section`
         
         ${media.tablet} {
             width: 400px;
+        }
+
+        ${media.largeTablet} {
+            width: 420px;
+            margin-top: 40px;
+        }
+
+        ${media.modern} {
+            width: 440px;
+            margin-top: 50px;
         }
 
         .primary {
@@ -62,6 +80,14 @@ export const DetailsWrap = styled.section`
             background-color: #f8f8f8;
             color: gray;
             padding: 0 10px;
+
+            ${media.largeTablet} {
+                margin-bottom: 10px;
+            }
+
+            ${media.modern} {
+                margin-bottom: 15px;
+            }
         `;
     
     export const SubmitBox = styled.section`

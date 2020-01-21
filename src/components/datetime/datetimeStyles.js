@@ -20,6 +20,14 @@ export const DatetimeWrap = styled.section`
         position: relative;
         margin-top: 20px;
     }
+
+    ${media.largeTablet} {
+        width: 800px;
+    }
+
+    ${media.modern} {
+        width: 1300px;
+    }
 `;
 
     export const DatetimeBox = styled.section`
@@ -36,6 +44,14 @@ export const DatetimeWrap = styled.section`
         
         ${media.tablet} {
             width: 440px;
+        }
+
+        ${media.largeTablet} {
+            margin-top: 40px;
+        }
+
+        ${media.modern} {
+            margin-top: 50px;
         }
 
         // CALENDAR

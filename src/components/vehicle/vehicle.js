@@ -16,7 +16,8 @@ import {
     VehicleHeading,
     VehicleTextBox,
     VehicleTextBoxSec,
-    VehicleText
+    VehicleText,
+    ErrorMSG,
 } from './vehicleStyles';
 
 function Vehicle (props) {
@@ -27,27 +28,39 @@ function Vehicle (props) {
     const makes = props.makes;
     const models = props.models;
     const years = props.years;
+    const cars = props.cars;
+    const sbModel = props.sbModel;
 
     useEffect(() => {
-        if (props.cars.length > 0) {
+        if (cars.length > 0) {
             setShowMakeType(true);
             console.log('Showing all make');
         } else { setShowMakeType(false) }
 
-        if (props.years.length > 0) {
+        if (years.length > 0) {
             setShowMakeType(false);
             setShowModelType(true);
 
             console.log('Showing all model');
         } else { setShowModelType(false) }
 
-        if (props.cars.length === 1) {
+        if (cars.length === 1) {
             setShowModelType(false);
             setShowYearType(true);
 
             console.log('Showing all Year');
         } else { setShowYearType(false) }
-    }, [props.cars, props.sbModel, props.years]);
+    }, [cars, sbModel, years]);
+
+    const handleSelection = (e, el) => {
+        props.setProductID(el.vin);
+
+        setTimeout(() => {
+            props.setPage(2);
+        }, 300);
+    }
+
+    const errs = props.errors;
 
     return (
         <VehicleWrap>
@@ -76,12 +89,16 @@ function Vehicle (props) {
                         })}
                     </Select>
                 </SelectionBox>
-                <CarBox>
+                {errs.includes(10) ? <ErrorMSG>Plase Select a Vehicle</ErrorMSG> : null }
+                <CarBox productID={props.productID}>
                     {showMakeType ? (
                         props.cars.map((el) => {
+                            console.log(el['image[0].url']);
                             return (
-                                <Car key={el.vin}>
-                                    <VehicleIMG src="#" />
+                                <Car
+                                    key={el.vin}
+                                    onClick={(e) => handleSelection(e, el) }>
+                                    <VehicleIMG src={el["image[0].url"]} />
                                     <VehicleInfo>
                                         <VehicleHeading>{el.title}</VehicleHeading>
                                         <VehicleTextBox>
@@ -106,8 +123,10 @@ function Vehicle (props) {
                     {showModelType ? (
                         props.sbModel.map((el) => {
                             return (
-                                <Car key={el.vin}>
-                                    <VehicleIMG src="#" />
+                                <Car 
+                                    key={el.vin}
+                                    onClick={(e) => handleSelection(e, el) }>
+                                    <VehicleIMG src={el["image[0].url"]} />
                                     <VehicleInfo>
                                         <VehicleHeading>{el.title}</VehicleHeading>
                                         <VehicleTextBox>
@@ -132,8 +151,10 @@ function Vehicle (props) {
                     {showYearType ? (
                         props.cars.map((el) => {
                             return (
-                                <Car key={el.vin}>
-                                    <VehicleIMG src="#" />
+                                <Car
+                                    key={el.vin}
+                                    onClick={(e) => handleSelection(e, el) }>
+                                    <VehicleIMG src={el["image[0].url"]} />
                                     <VehicleInfo>
                                         <VehicleHeading>{el.title}</VehicleHeading>
                                         <VehicleTextBox>

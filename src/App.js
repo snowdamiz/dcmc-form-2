@@ -132,6 +132,7 @@ function App() {
   }
 
   const submit = () => {
+    setErrors([]);
     let err = [];
 
     const regexName = /^[a-zA-Z\s]*$/;
@@ -147,6 +148,21 @@ function App() {
     if (phone.length != 10 || !regexNumber.test(phone)) err.push(42);
 
     setErrors(err);
+
+    setTimeout(() => {
+      for (let i = 0; i < err.length; i++) {
+        if (err[i] === 10) {
+          // setPage(1);
+          setTimeout(() => setPage(1));
+        } else if (err[i] === 20 || 21 ) {
+          setPage(2);
+        } else if (err[i] === 30) {
+          setPage(3);
+        } else {
+          setPage(4);
+        }
+      }
+    }, 1000 );
 }
 
   switch (page) {

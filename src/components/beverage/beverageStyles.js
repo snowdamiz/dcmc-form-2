@@ -20,6 +20,14 @@ export const BeverageWrap = styled.section`
         position: relative;
         margin-top: 20px;
     }
+
+    ${media.largeTablet} {
+        width: 800px;
+    }
+
+    ${media.modern} {
+        width: 1300px;
+    }
 `;
 
     export const BeverageBox = styled.section`
@@ -54,6 +62,16 @@ export const BeverageWrap = styled.section`
                 ${media.tablet} {
                     border: 8px solid ${colors.green};
                 }
+            }
+
+            ${media.largeTablet} {
+                margin-top: 10px;
+                margin-bottom: 20px;
+            }
+
+            ${media.modern} {
+                margin-top: 20px;
+                margin-bottom: 30px;
             }
         `;
 
