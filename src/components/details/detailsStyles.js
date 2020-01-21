@@ -3,7 +3,7 @@ import { fonts, colors, media } from '../../vars';
 
 export const DetailsWrap = styled.section`
     width: 100%;
-    height: 100vh;
+    min-height: 100%;
     // border: 1px solid blue;
     box-shadow: 0px 0px 10px #B7B7B7;
     position: absolute;
@@ -15,6 +15,7 @@ export const DetailsWrap = styled.section`
     ${media.tablet} {
         width: 560px;
         max-height: 800px;
+        min-height: 800px;
         margin: 0px auto;
         position: relative;
         margin-top: 20px;

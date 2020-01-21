@@ -29,37 +29,25 @@ function Vehicle (props) {
     const years = props.years;
 
     useEffect(() => {
-        function checkMakes() {
-            if (props.cars !== []) {
-                setShowMakeType(true);
+        if (props.cars.length > 0) {
+            setShowMakeType(true);
+            console.log('Showing all make');
+        } else { setShowMakeType(false) }
 
-                let x = props.cars[0];
+        if (props.years.length > 0) {
+            setShowMakeType(false);
+            setShowModelType(true);
 
-                console.log(x);
-            } else { setShowMakeType(false) }
-        }
+            console.log('Showing all model');
+        } else { setShowModelType(false) }
 
-        // function checkModels() {
-        //     if (props.sbModel !== []) {
-        //         setShowModelType(true);
-        //         console.log("Showing Models");
-        //     } { setShowModelType(false) }
-        // }
+        if (props.cars.length === 1) {
+            setShowModelType(false);
+            setShowYearType(true);
 
-        // function checkYears() {
-        //     if (props.years !== []) {
-        //         console.log("Showing Models > Years");
-        //         setShowYearType(true);
-        //     } else setShowYearType(false);
-        // }
-
-        checkMakes();
-        // checkModels();
-        // checkYears();
-    }, [props.cars]);
-
-    // console.log(props.years);
-
+            console.log('Showing all Year');
+        } else { setShowYearType(false) }
+    }, [props.cars, props.sbModel, props.years]);
 
     return (
         <VehicleWrap>
@@ -115,11 +103,63 @@ function Vehicle (props) {
                             )
                         })
                     ) : null }
+                    {showModelType ? (
+                        props.sbModel.map((el) => {
+                            return (
+                                <Car key={el.vin}>
+                                    <VehicleIMG src="#" />
+                                    <VehicleInfo>
+                                        <VehicleHeading>{el.title}</VehicleHeading>
+                                        <VehicleTextBox>
+                                            <VehicleTextBoxSec>
+                                                <VehicleText>VIN:</VehicleText>
+                                                <VehicleText>{el.vin}</VehicleText>
+                                            </VehicleTextBoxSec>
+                                            <VehicleTextBoxSec>
+                                                <VehicleText>Color:</VehicleText>
+                                                <VehicleText>{el.exterior_color}</VehicleText>
+                                            </VehicleTextBoxSec>
+                                            <VehicleTextBoxSec>
+                                                <VehicleText>Price:</VehicleText>
+                                                <VehicleText>{el.price}</VehicleText>
+                                            </VehicleTextBoxSec>
+                                        </VehicleTextBox>
+                                    </VehicleInfo>
+                                </Car>
+                            )
+                        })
+                    ) : null }
+                    {showYearType ? (
+                        props.cars.map((el) => {
+                            return (
+                                <Car key={el.vin}>
+                                    <VehicleIMG src="#" />
+                                    <VehicleInfo>
+                                        <VehicleHeading>{el.title}</VehicleHeading>
+                                        <VehicleTextBox>
+                                            <VehicleTextBoxSec>
+                                                <VehicleText>VIN:</VehicleText>
+                                                <VehicleText>{el.vin}</VehicleText>
+                                            </VehicleTextBoxSec>
+                                            <VehicleTextBoxSec>
+                                                <VehicleText>Color:</VehicleText>
+                                                <VehicleText>{el.exterior_color}</VehicleText>
+                                            </VehicleTextBoxSec>
+                                            <VehicleTextBoxSec>
+                                                <VehicleText>Price:</VehicleText>
+                                                <VehicleText>{el.price}</VehicleText>
+                                            </VehicleTextBoxSec>
+                                        </VehicleTextBox>
+                                    </VehicleInfo>
+                                </Car>
+                            )
+                        })
+                    ) : null }
                 </CarBox>
             </VehicleBox>
-            <NextBtn
+            {/* <NextBtn
                 page={props.page}
-                setPage={props.setPage} />
+                setPage={props.setPage} /> */}
         </VehicleWrap>
     )
 }

@@ -12,7 +12,7 @@ export const HeaderWrap = styled.header`
     align-items: center;
 
     ${media.tablet} {
-        height: 60px;
+        min-height: 60px;
         justify-content: center;
     }
 `;
