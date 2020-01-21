@@ -98,16 +98,16 @@ function Vehicle (props) {
                                         <VehicleHeading>{el.title}</VehicleHeading>
                                         <VehicleTextBox>
                                             <VehicleTextBoxSec>
-                                                <VehicleText></VehicleText>
-                                                <VehicleText></VehicleText>
+                                                <VehicleText>VIN:</VehicleText>
+                                                <VehicleText>{el.vin}</VehicleText>
                                             </VehicleTextBoxSec>
                                             <VehicleTextBoxSec>
-                                                <VehicleText></VehicleText>
-                                                <VehicleText></VehicleText>
+                                                <VehicleText>Color:</VehicleText>
+                                                <VehicleText>{el.exterior_color}</VehicleText>
                                             </VehicleTextBoxSec>
                                             <VehicleTextBoxSec>
-                                                <VehicleText></VehicleText>
-                                                <VehicleText></VehicleText>
+                                                <VehicleText>Price:</VehicleText>
+                                                <VehicleText>{el.price}</VehicleText>
                                             </VehicleTextBoxSec>
                                         </VehicleTextBox>
                                     </VehicleInfo>

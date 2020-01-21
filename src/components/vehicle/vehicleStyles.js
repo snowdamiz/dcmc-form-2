@@ -61,42 +61,86 @@ export const VehicleWrap = styled.section`
 
         export const CarBox = styled.div`
             width: 100%;
-            border: 1px solid red;
+            // border: 1px solid red;
             display: flex;
             flex-flow: column nowrap;
             justify-content: flex-start;
             align-items: center;
-            margin-top: 20px;
+            margin-top: 25px;
 
             ${media.tablet} {
-                margin-top: 26px;
+                margin-top: 30px;
             }
         `;
 
             export const Car = styled.div`
-            
+                width: 100%;
+                // border: 1px solid ${colors.green};
+                display: flex;
+                flex-flow: column nowrap;
+                justify-content: center;
+                align-items: center;
+                margin-bottom: 20px;
             `;
 
                 export const VehicleIMG = styled.img`
-                
+                    width: 100%;
+                    // height: auto;
+                    min-height: 150px;
+                    border-left: 1px solid ${colors.gray};
+                    border-right: 1px solid ${colors.gray};
+                    background-color: ${colors.gray};
                 `;
 
                 export const VehicleInfo = styled.div`
-                
+                    width: 100%;
+                    display: flex;
+                    flex-flow: column nowrap;
+                    justify-content: center;
+                    align-items: center;
                 `;
 
                     export const VehicleHeading = styled.h3`
-                    
+                        font-family: ${fonts.text};
+                        font-weight: 700;
+                        color: ${colors.white};
+                        align-self: flex-start;
+                        padding: 10px;
+                        font-size: 17px;
+                        // border: 1px solid red;
+                        border-left: 1px solid ${colors.green};
+                        border-right: 1px solid ${colors.green};
+                        background-color: ${colors.green};
+                        width: 290px;
+                        margin-left: -1px;
                     `;
 
                     export const VehicleTextBox = styled.div`
-
+                        box-sizing: box;
+                        display: flex;
+                        flex-flow: column nowrap;
+                        justify-content: center;
+                        align-items: center;
+                        // border: 1px solid green;
+                        border-right: 1px solid ${colors.gray};
+                        border-left: 1px solid ${colors.gray};
+                        border-bottom: 1px solid ${colors.gray};
+                        width: 100%;
+                        padding: 14px 0;
                     `;
 
                         export const VehicleTextBoxSec = styled.div`
-                        
+                            display: flex;
+                            flex-flow: row nowrap;
+                            justify-content: space-between;
+                            align-items: center;
+                            width: 100%;
+                            padding: 6px 0;
                         `;
 
-                            export const VehicleText = styled.div`
-                            
+                            export const VehicleText = styled.p`
+                                font-family: ${fonts.text};
+                                color: ${colors.dark};
+                                font-size: 14px;
+                                padding: 0 10px;
                             `;
