@@ -80,6 +80,7 @@ export const DetailsWrap = styled.section`
             background-color: #f8f8f8;
             color: gray;
             padding: 0 10px;
+            font-family: ${fonts.text};
 
             ${media.largeTablet} {
                 margin-bottom: 10px;
@@ -88,6 +89,17 @@ export const DetailsWrap = styled.section`
             ${media.modern} {
                 margin-bottom: 15px;
             }
+        `;
+
+        export const Textarea = styled.textarea`
+            width: 100%;
+            height: 100px;
+            border: 1px solid #D7D7D7;
+            border-radius: 3px;
+            background-color: #f8f8f8;
+            color: gray;
+            padding: 10px;
+            font-family: ${fonts.text};
         `;
     
     export const SubmitBox = styled.section`

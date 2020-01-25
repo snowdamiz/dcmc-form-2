@@ -20,6 +20,8 @@ function App() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
+  const [address, setAddress] = useState("");
+  const [comment, setComment] = useState("");
   
   const [makes, setMakes] = useState([]);
   const [models, setModels] = useState([]);
@@ -49,21 +51,22 @@ function App() {
 
   
   const sortData = () => {
-    setTimeout(() => {
-      const getMakes = () => {
-        let makes = [];
-        let sortedMakes = [];
+    const getMakes = () => {
+      let makes = [];
+      let sortedMakes = [];
 
-        for (let i = 0; i < data.length; i++) {
-          let carMake = data[i];
-          makes.push(carMake.make);
-        }
-
-        sortedMakes = [...new Set(makes)];
-        setMakes(sortedMakes);
+      for (let i = 0; i < data.length; i++) {
+        let carMake = data[i];
+        makes.push(carMake.make);
       }
+
+      sortedMakes = [...new Set(makes)];
+      setMakes(sortedMakes);
+    }
+
+    setTimeout(() => {
       getMakes();
-    }, 500)
+    }, 1000); 
   }
 
   const selectMake = (el) => {
@@ -86,9 +89,6 @@ function App() {
     setCars(sortedCars);
     setModels(sortedModels);
     setYears([]);
-
-    // console.log(cars[0].vin);
-    // console.log(cars);
   }
 
   const selectModel = (el) => {
@@ -110,8 +110,6 @@ function App() {
 
     setSbModel(sortedVehicles);
     setYears(sortedYears);
-
-    // console.log(cars);
   }
 
   const selectYear = (el) => {
@@ -127,42 +125,44 @@ function App() {
 
     sortedVehicles = [...new Set(vehicles)];
     setCars(sortedVehicles);
-
-    // console.log(cars);
   }
 
   const submit = () => {
     setErrors([]);
     let err = [];
 
-    const regexName = /^[a-zA-Z\s]*$/;
+    const regexLetters = /^[a-zA-Z\s]*$/;
     const regexEmail = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
     const regexNumber = /^\d+$/;
+    const regexAddress = /^[0-9a-zA-Z]+$/;
 
     if (productID === "") err.push(10);
     if (date === "") err.push(20);
     if (time === "") err.push(21);
     if (beverage === "") err.push(30);
-    if (name.length < 5 || name.length > 30 || !regexName.test(name)) err.push(40);
+    if (name.length < 5 || name.length > 30 || !regexLetters.test(name)) err.push(40);
     if (email.length < 6 || email.length > 30 || !regexEmail.test(email)) err.push(41);
     if (phone.length != 10 || !regexNumber.test(phone)) err.push(42);
+    if (address.length < 10 || !regexAddress.test(address)) err.push(43);
 
     setErrors(err);
 
     setTimeout(() => {
       for (let i = 0; i < err.length; i++) {
         if (err[i] === 10) {
-          // setPage(1);
-          setTimeout(() => setPage(1));
+          setTimeout(() => setPage(1), 500)
+          break;
         } else if (err[i] === 20 || 21 ) {
           setPage(2);
+          break;
         } else if (err[i] === 30) {
           setPage(3);
+          break;
         } else {
           setPage(4);
         }
       }
-    }, 1000 );
+    }, 800 );
 }
 
   switch (page) {
@@ -213,7 +213,11 @@ function App() {
               setPhone={setPhone}
               errors={errors}
               setErrors={setErrors}
-              submit={submit} />
+              submit={submit}
+              address={address}
+              setAddress={setAddress}
+              comment={comment}
+              setComment={setComment} />
   }
 }
 

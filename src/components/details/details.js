@@ -7,6 +7,7 @@ import {
     DetailsBox,
     ErrorMSG,
     Input,
+    Textarea,
     SubmitBox,
     SubmitBtn
 } from './detailsStyles';
@@ -16,6 +17,8 @@ function Details (props) {
     const handleName = (e) =>  props.setName(e.target.value);
     const handleEmail = (e) => props.setEmail(e.target.value);
     const handlePhone = (e) => props.setPhone(e.target.value);
+    const handleAddress = (e) => props.setAddress(e.target.value);
+    const handleComment = (e) => props.setComment(e.target.value);
 
     const errs = props.errors;
 
@@ -46,6 +49,19 @@ function Details (props) {
                     placeholder="Phone"
                     value={props.phone}
                     onChange={handlePhone} />
+
+                {errs.includes(43) ? <ErrorMSG>Enter a Valid Address</ErrorMSG> : null }
+                <Input
+                    type="text"
+                    placeholder="Pick Up Address"
+                    value={props.address}
+                    onChange={handleAddress} />
+
+                <Textarea
+                    type="text"
+                    placeholder="Comment"
+                    value={props.comment}
+                    onChange={handleComment} />
             </DetailsBox>  
             <SubmitBox>
                 <SubmitBtn onClick={props.submit}>Submit</SubmitBtn>
