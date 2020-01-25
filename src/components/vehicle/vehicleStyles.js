@@ -26,7 +26,7 @@ export const VehicleWrap = styled.section`
     }
 
     ${media.modern} {
-        width: 1300px;
+        width: 1400px;
     }
 `;
 
