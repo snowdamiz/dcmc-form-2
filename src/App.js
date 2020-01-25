@@ -85,7 +85,7 @@ function App() {
     }
 
     sortedCars = [...new Set(cars)];
-    sortedModels = [... new Set(models)];
+    sortedModels = [...new Set(models)];
     sortedModels.sort();
 
     setCars(sortedCars);
