@@ -22,7 +22,7 @@ export const VehicleWrap = styled.section`
     }
 
     ${media.largeTablet} {
-        width: 800px;
+        width: 900px;
     }
 
     ${media.modern} {
