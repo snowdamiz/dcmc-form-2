@@ -124,7 +124,7 @@ export const DatetimeWrap = styled.section`
 
                     .react-calendar__tile--active {
                         color: ${colors.white};
-                        background-color: ${colors.green};
+                        background-color: ${colors.primaryDark};
                     }
 
                     .react-calendar__tile {
@@ -132,6 +132,20 @@ export const DatetimeWrap = styled.section`
                         height: 42px;
                         font-size: 14px;
                         font-family: ${fonts.text};
+
+                        &:disabled {
+                            color: ${colors.darkGray};
+
+                            &:hover {
+                                background-color: #fff;
+                                color: ${colors.darkGray};
+                            }
+                        }
+
+                        &:hover {
+                            background-color: ${colors.primaryDark};
+                            color: #fff;
+                        }
                         
                         ${media.tablet} {
                             height: 48px;
@@ -182,8 +196,8 @@ export const DatetimeWrap = styled.section`
                 }
 
                 &:hover {
-                    border: 1px solid ${colors.green};
-                    background-color: ${colors.green};
+                    border: 1px solid ${colors.primaryDark};
+                    background-color: ${colors.primaryDark};
                     color: ${colors.white};
                     font-weight: 800;
                 }
