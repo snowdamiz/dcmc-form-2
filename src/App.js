@@ -39,6 +39,7 @@ function App() {
           download: true,
           skipEmptyLines: true,
           complete: (res) => {
+            res.sort();
             setRows(res.data);
             data = res.data;
           }
