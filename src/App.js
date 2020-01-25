@@ -7,7 +7,6 @@ import Vehicle from './components/vehicle/vehicle';
 import Datetime from './components/datetime/datetime';
 import Beverage from './components/beverage/beverage';
 import Details from './components/details/details';
-import NextBtn from './components/nextbtn/nextbtn';
 
 function App() {
   const [rows, setRows] = useState([]);
@@ -144,7 +143,7 @@ function App() {
     if (name.length < 5 || name.length > 30 || !regexLetters.test(name)) err.push(40);
     if (email.length < 6 || email.length > 30 || !regexEmail.test(email)) err.push(41);
     if (phone.length != 10 || !regexNumber.test(phone)) err.push(42);
-    if (address.length < 10 || !regexAddress.test(address)) err.push(43);
+    if (address.length < 8 || address.length > 30 || !regexAddress.test(address)) err.push(43);
 
     setErrors(err);
 

@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Header from '../header/header';
 import Nav from '../nav/nav';
-import NextBtn from '../nextbtn/nextbtn';
 
 import {
     VehicleWrap,
@@ -34,22 +33,18 @@ function Vehicle (props) {
     useEffect(() => {
         if (cars.length > 0) {
             setShowMakeType(true);
-            console.log('Showing all make');
         } else { setShowMakeType(false) }
 
         if (years.length > 0) {
             setShowMakeType(false);
             setShowModelType(true);
-
-            console.log('Showing all model');
         } else { setShowModelType(false) }
 
         if (cars.length === 1) {
             setShowModelType(false);
             setShowYearType(true);
-
-            console.log('Showing all Year');
         } else { setShowYearType(false) }
+
     }, [cars, sbModel, years]);
 
     const handleSelection = (e, el) => {
