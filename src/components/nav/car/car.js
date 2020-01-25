@@ -17,7 +17,9 @@ function Car (props) {
         if (props.page === 1) setActive(true);
     }, [props.page])
 
-    const HandlePage = () => props.setPage(1);
+    const HandlePage = () => {
+        props.setPage(1);
+    } 
 
     return (
         <CarWrap 

@@ -13,7 +13,8 @@ function Nav (props) {
         <NavWrap>
             <Car
                 page={props.page}
-                setPage={props.setPage} />
+                setPage={props.setPage}
+                setProductID={props.setProductID} />
             <Time 
                 page={props.page}
                 setPage={props.setPage} />

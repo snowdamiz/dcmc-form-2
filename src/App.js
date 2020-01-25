@@ -134,7 +134,7 @@ function App() {
     const regexLetters = /^[a-zA-Z\s]*$/;
     const regexEmail = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
     const regexNumber = /^\d+$/;
-    const regexAddress = /^[0-9a-zA-Z]+$/;
+    const regexAddress = /^[a-zA-Z0-9 ]*$/;
 
     if (productID === "") err.push(10);
     if (date === "") err.push(20);
@@ -158,8 +158,10 @@ function App() {
         } else if (err[i] === 30) {
           setPage(3);
           break;
-        } else {
+        } else if (err[i] === 40 || 41 || 42 || 43) {
           setPage(4);
+        } else {
+          // Run api call
         }
       }
     }, 800 );

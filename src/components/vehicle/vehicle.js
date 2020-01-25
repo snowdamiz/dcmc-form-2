@@ -67,7 +67,8 @@ function Vehicle (props) {
             <Header />
             <Nav
                 page={props.page}
-                setPage={props.setPage}/>
+                setPage={props.setPage}
+                setProductID={props.setProductID} />
             <VehicleBox>
                 <SelectionBox>
                     <Select defaultValue="Make" onChange={(e) => props.selectMake(e.target.value)}>
@@ -93,7 +94,6 @@ function Vehicle (props) {
                 <CarBox productID={props.productID}>
                     {showMakeType ? (
                         props.cars.map((el) => {
-                            console.log(el['image[0].url']);
                             return (
                                 <Car
                                     key={el.vin}

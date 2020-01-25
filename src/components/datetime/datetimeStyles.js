@@ -57,7 +57,8 @@ export const DatetimeWrap = styled.section`
         // CALENDAR
         .react-calendar {
             border: none;
-            box-shadow: 0px 0px 10px #CDCDCD;
+            // box-shadow: 0px 0px 10px #CDCDCD;
+            border: 1px solid ${colors.gray};
             width: 100%;
             margin-bottom: 15px;
 
@@ -174,8 +175,8 @@ export const DatetimeWrap = styled.section`
             margin-bottom: 15px;
 
             .activeTime {
-                border: 1px solid ${colors.green};
-                background-color: ${colors.green};
+                border: 1px solid ${colors.primaryDark};
+                background-color: ${colors.primaryDark};
                 color: ${colors.white};
                 font-weight: 800;
             }

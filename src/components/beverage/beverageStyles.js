@@ -53,7 +53,7 @@ export const BeverageWrap = styled.section`
             flex-flow: row nowrap;
             justify-content: space-between;
             align-items: center;
-            margin-bottom: 16px;
+            margin-bottom: 20px;
 
             // ACTIVE CLASS FOR SELECTED ITEM
             .active {
@@ -82,7 +82,8 @@ export const BeverageWrap = styled.section`
                 flex-flow: column nowrap;
                 justify-content: center;
                 align-items: center;
-                box-shadow: 0px 0px 10px #CDCDCD;
+                // box-shadow: 0px 0px 10px #CDCDCD;
+                outline: 1px solid ${colors.gray};
                 border: 6px solid transparent;
                 cursor: pointer;
 

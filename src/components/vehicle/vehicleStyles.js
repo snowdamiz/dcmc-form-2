@@ -36,11 +36,11 @@ export const VehicleWrap = styled.section`
         flex-flow: column nowrap;
         justify-content: center;
         align-items: center;
-        width: 310px;
+        width: 290px;
         margin-top: 30px;
 
         ${media.phone} {
-            width: 340px;
+            width: 320px;
         }
         
         ${media.tablet} {
@@ -132,11 +132,11 @@ export const VehicleWrap = styled.section`
 
                 export const VehicleIMG = styled.img`
                     width: 100%;
-                    height: 180px;
+                    height: 190px;
                     background-color: ${colors.gray};
 
                     ${media.phone} {
-                        height: 200px;
+                        height: 216px;
                     }
 
                     ${media.tablet} {
@@ -169,12 +169,12 @@ export const VehicleWrap = styled.section`
                         font-size: 17px;
                         // border: 1px solid red;
                         background-color: ${colors.green};
-                        width: 290px;
+                        width: 270px;
                         // margin-left: -1px;
                         // min-height: 30px;
 
                         ${media.phone} {
-                            width: 320px;
+                            width: 300px;
                         }
 
                         ${media.tablet} {
