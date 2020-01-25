@@ -61,6 +61,7 @@ function App() {
       }
 
       sortedMakes = [...new Set(makes)];
+      sortedMakes.sort();
       setMakes(sortedMakes);
     }
 
@@ -85,6 +86,7 @@ function App() {
 
     sortedCars = [...new Set(cars)];
     sortedModels = [... new Set(models)];
+    sortedModels.sort();
 
     setCars(sortedCars);
     setModels(sortedModels);
