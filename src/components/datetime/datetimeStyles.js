@@ -17,16 +17,14 @@ export const DatetimeWrap = styled.section`
         max-height: 800px;
         min-height: 800px;
         margin: 0px auto;
-        position: relative;
-        margin-top: 20px;
     }
 
     ${media.largeTablet} {
-        width: 800px;
+        width: 900px;
     }
 
     ${media.modern} {
-        width: 1300px;
+        width: 1400px;
     }
 `;
 
