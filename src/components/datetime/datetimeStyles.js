@@ -120,12 +120,12 @@ export const DatetimeWrap = styled.section`
                     }
 
                     .react-calendar__month-view__days__day--weekend {
-                        color: ${colors.primaryDark};
+                        color: ${colors.green};
                     }
 
                     .react-calendar__tile--active {
                         color: ${colors.white};
-                        background-color: ${colors.primaryDark};
+                        background-color: ${colors.green};
                     }
 
                     .react-calendar__tile {
@@ -175,8 +175,8 @@ export const DatetimeWrap = styled.section`
             margin-bottom: 15px;
 
             .activeTime {
-                border: 1px solid ${colors.primaryDark};
-                background-color: ${colors.primaryDark};
+                border: 1px solid ${colors.green};
+                background-color: ${colors.green};
                 color: ${colors.white};
                 font-weight: 800;
             }
@@ -197,8 +197,8 @@ export const DatetimeWrap = styled.section`
                 }
 
                 &:hover {
-                    border: 1px solid ${colors.primaryDark};
-                    background-color: ${colors.primaryDark};
+                    border: 1px solid ${colors.green};
+                    background-color: ${colors.green};
                     color: ${colors.white};
                     font-weight: 800;
                 }

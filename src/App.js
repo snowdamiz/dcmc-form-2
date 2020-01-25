@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Papa from 'papaparse';
+import Axios from 'axios';
 import './reset.css';
 
 import Vehicle from './components/vehicle/vehicle';
@@ -147,7 +148,21 @@ function App() {
 
     setErrors(err);
 
-    setTimeout(() => {
+    if (err.length === 0) {
+      let dataSubmitted = {
+        productID,
+        date,
+        time,
+        beverage,
+        name,
+        email,
+        phone,
+        address,
+        comment
+      }
+
+      Axios.post("https://dcwebleads.herokuapp.com/api/send", dataSubmitted);
+    } else {
       for (let i = 0; i < err.length; i++) {
         if (err[i] === 10) {
           setTimeout(() => setPage(1), 500)
@@ -158,13 +173,9 @@ function App() {
         } else if (err[i] === 30) {
           setPage(3);
           break;
-        } else if (err[i] === 40 || 41 || 42 || 43) {
-          setPage(4);
-        } else {
-          // Run api call
-        }
+        } else if (err[i] === 40 || 41 || 42 || 43) setPage(4);
       }
-    }, 800 );
+    }
 }
 
   switch (page) {
