@@ -17,7 +17,7 @@ export const VehicleWrap = styled.section`
         max-height: 800px;
         min-height: 800px;
         margin: 0px auto;
-        position: relative;
+        // position: relative;
         margin-top: 20px;
         overflow-y: auto;
     }
