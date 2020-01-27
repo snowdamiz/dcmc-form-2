@@ -32,6 +32,7 @@ function Datetime (props) {
                 setPage={props.setPage} />
 
             <DatetimeBox>
+                <h1 className="head">Select Date & Time</h1>
                 {errs.includes(20) ? <ErrorMSG>Please Select a Date</ErrorMSG> : null }
                 <Calendar
                     onChange={handleDate} 

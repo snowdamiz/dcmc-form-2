@@ -10,7 +10,7 @@ import {
 function Header () {
     return (
         <HeaderWrap>
-            <H1>VIP Test Drive</H1>
+            <H1>D<span>&</span>C Test Drive</H1>
             {/* <Close src={CloseBtn} /> */}
         </HeaderWrap>
     )

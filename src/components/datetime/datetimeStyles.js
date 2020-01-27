@@ -52,6 +52,27 @@ export const DatetimeWrap = styled.section`
             margin-top: 50px;
         }
 
+        .head {
+            font-family: ${fonts.text};
+            font-size: 16px;
+            font-weight: bold;
+            color: ${colors.green};
+            align-self: flex-start;
+            margin-bottom: 8px;
+    
+            // ${media.tablet} {
+            //     margin-left: 26px;
+            // }
+    
+            // ${media.largeTablet} {
+            //     margin-left: 136px;
+            // }
+    
+            // ${media.desktop} {
+            //     margin-left: 376px;
+            // }
+        }
+
         // CALENDAR
         .react-calendar {
             border: none;

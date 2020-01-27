@@ -29,6 +29,15 @@ function Details (props) {
                 page={props.page}
                 setPage={props.setPage} />
             <DetailsBox>
+                <h1 className="addr_head">Appointment Location</h1>
+                {errs.includes(43) ? <ErrorMSG>Enter a Valid Address</ErrorMSG> : null }
+                <Input
+                    type="text"
+                    placeholder="Appointment Address"
+                    value={props.address}
+                    onChange={handleAddress} />
+
+                <h1 className="addr_head">Your Information</h1>
                 {errs.includes(40) ? <ErrorMSG>Enter a Valid Name</ErrorMSG> : null }
                 <Input 
                     type="text"
@@ -49,13 +58,6 @@ function Details (props) {
                     placeholder="Phone"
                     value={props.phone}
                     onChange={handlePhone} />
-
-                {errs.includes(43) ? <ErrorMSG>Enter a Valid Address</ErrorMSG> : null }
-                <Input
-                    type="text"
-                    placeholder="Pick Up Address"
-                    value={props.address}
-                    onChange={handleAddress} />
 
                 <Textarea
                     type="text"

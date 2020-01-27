@@ -65,6 +65,7 @@ function Vehicle (props) {
                 setPage={props.setPage}
                 setProductID={props.setProductID} />
             <VehicleBox>
+                <h1 className="head">Select Vehicle</h1>
                 <SelectionBox>
                     <Select defaultValue="Make" onChange={(e) => props.selectMake(e.target.value)}>
                         <Option disabled hidden value="Make">Make</Option>

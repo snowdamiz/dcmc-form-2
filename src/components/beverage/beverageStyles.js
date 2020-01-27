@@ -43,6 +43,15 @@ export const BeverageWrap = styled.section`
         ${media.tablet} {
             width: 400px;
         }
+
+        .head {
+            font-family: ${fonts.text};
+            font-size: 16px;
+            font-weight: bold;
+            color: ${colors.green};
+            align-self: flex-start;
+            margin-bottom: 8px;
+        }
     `;
 
         export const Section = styled.section`

@@ -20,13 +20,17 @@ export const HeaderWrap = styled.header`
     export const H1 = styled.h1`
         color: ${colors.white};
         font-size: 18px;
-        font-family: ${fonts.heading};
+        font-family: "Times New Roman", Times, serif;
         font-weight: 600;
         margin-left: 14px;
 
         ${media.tablet} {
             font-size: 20px;
             margin-left: 0;
+        }
+
+        span {
+            font-size: 16px;
         }
     `;
 

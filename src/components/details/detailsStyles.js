@@ -57,6 +57,20 @@ export const DetailsWrap = styled.section`
         .primary {
             margin-top: 10px;
         }
+
+        .addr_head {
+            font-family: ${fonts.text};
+            font-size: 16px;
+            font-weight: bold;
+            color: ${colors.green};
+            align-self: flex-start;
+            margin-bottom: 8px;
+            margin-left: -10px;
+
+            &:nth-of-type(2) {
+                margin-top: 16px;
+            }
+        }
     `;
 
         export const ErrorMSG = styled.span`

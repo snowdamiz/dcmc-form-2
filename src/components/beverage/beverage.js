@@ -33,6 +33,7 @@ function Beverage (props) {
                 page={props.page}
                 setPage={props.setPage} />
             <BeverageBox>
+                <h1 className="head">Choice of Drink</h1>
                 {errs.includes(20) ? <ErrorMSG>Please Selecet a Refreshment</ErrorMSG> : null }
                 <Section>
                     <Item

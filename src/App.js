@@ -39,7 +39,6 @@ function App() {
           download: true,
           skipEmptyLines: true,
           complete: (res) => {
-            res.sort();
             setRows(res.data);
             data = res.data;
           }
@@ -175,7 +174,8 @@ function App() {
         } else if (err[i] === 30) {
           setPage(3);
           break;
-        } else if (err[i] === 40 || 41 || 42 || 43) setPage(4);
+        }
+        // } else if (err[i] === 40 || 41 || 42 || 43) setPage(4);
       }
     }
 }
