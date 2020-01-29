@@ -11,7 +11,9 @@ function Header (props) {
     return (
         <HeaderWrap>
             <H1 onClick={props.reset}>D<span>&</span>C Test Drive</H1>
-            <Close src={CloseBtn} />
+            <a href="https://www.dcmotorcompany.com/">
+                <Close src={CloseBtn} />
+            </a>
         </HeaderWrap>
     )
 }
