@@ -28,7 +28,7 @@ function Beverage (props) {
 
     return (
         <BeverageWrap>
-            <Header />
+            <Header reset={props.reset} />
             <Nav
                 page={props.page}
                 setPage={props.setPage} />

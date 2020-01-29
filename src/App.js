@@ -168,7 +168,7 @@ function App() {
         if (err[i] === 10) {
           setTimeout(() => setPage(1), 500)
           break;
-        } else if (err[i] === 20 || 21 ) {
+        } else if (err[i] === 20 || err[i] === 21 ) {
           setPage(2);
           break;
         } else if (err[i] === 30) {
@@ -177,8 +177,27 @@ function App() {
         }
         // } else if (err[i] === 40 || 41 || 42 || 43) setPage(4);
       }
-    }
-}
+    } 
+  }
+
+  const reset = () => {
+    setPage(1);
+    setProductID("");
+    setErrors([]);
+    setDate("");
+    setTime("");
+    setBeverage("");
+    setName("");
+    setEmail("");
+    setPhone("");
+    setAddress("");
+    setComment("");
+    setMakes([]);
+    setModels([]);
+    setYears([]);
+    setCars([]);
+    setSbModel([]);
+  }
 
   switch (page) {
     case(1):
@@ -197,7 +216,8 @@ function App() {
               productID={productID}
               setProductID={setProductID}
               errors={errors}
-              setErrors={setErrors} />
+              setErrors={setErrors}
+              reset={reset} />
     case(2):
       return <Datetime
               page={page}
@@ -207,7 +227,8 @@ function App() {
               time={time}
               setTime={setTime}
               errors={errors}
-              setErrors={setErrors} />
+              setErrors={setErrors}
+              reset={reset} />
     case(3):
       return <Beverage
               page={page}
@@ -215,7 +236,8 @@ function App() {
               beverage={beverage}
               setBeverage={setBeverage}
               errors={errors}
-              setErrors={setErrors} />
+              setErrors={setErrors}
+              reset={reset} />
     case(4):
       return <Details
               page={page}
@@ -232,7 +254,8 @@ function App() {
               address={address}
               setAddress={setAddress}
               comment={comment}
-              setComment={setComment} />
+              setComment={setComment}
+              reset={reset} />
   }
 }
 

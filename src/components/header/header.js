@@ -7,11 +7,11 @@ import {
     Close,
 } from './headerStyles';
 
-function Header () {
+function Header (props) {
     return (
         <HeaderWrap>
-            <H1>D<span>&</span>C Test Drive</H1>
-            {/* <Close src={CloseBtn} /> */}
+            <H1 onClick={props.reset}>D<span>&</span>C Test Drive</H1>
+            <Close src={CloseBtn} />
         </HeaderWrap>
     )
 }

@@ -13,18 +13,7 @@ export const BeverageWrap = styled.section`
     align-items: center;
 
     ${media.tablet} {
-        width: 560px;
-        max-height: 800px;
-        min-height: 800px;
-        margin: 0px auto;
-    }
-
-    ${media.largeTablet} {
-        width: 900px;
-    }
-
-    ${media.modern} {
-        width: 1400px;
+        overflow-y: auto;
     }
 `;
 
@@ -51,6 +40,17 @@ export const BeverageWrap = styled.section`
             color: ${colors.green};
             align-self: flex-start;
             margin-bottom: 8px;
+            margin-top: 20px;
+
+            ${media.largeTablet} {
+                font-size: 18px;
+                margin-bottom: 10px;
+            }
+
+            ${media.desktop} {
+                font-size: 20px;
+                margin-bottom: 14px;
+            }
         }
     `;
 
@@ -72,12 +72,12 @@ export const BeverageWrap = styled.section`
             }
 
             ${media.largeTablet} {
-                margin-top: 10px;
+                // margin-top: 10px;
                 margin-bottom: 20px;
             }
 
             ${media.modern} {
-                margin-top: 20px;
+                // margin-top: 20px;
                 margin-bottom: 30px;
             }
         `;

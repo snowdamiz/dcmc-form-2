@@ -24,4 +24,8 @@ export const DetailsWrap = styled.div`
     ${media.tablet} {
         border-bottom: 5px solid ${props => props.active ? colors.green : `#f2f2f2`};
     }
+
+    ${media.desktop} {
+        width: 200px;
+    }
 `;

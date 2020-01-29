@@ -8,12 +8,20 @@ export const HeaderWrap = styled.header`
     height: 56px;
     display: flex;
     flex-flow: row nowrap;
-    justify-content: flex-start;
+    justify-content: space-between;
     align-items: center;
 
     ${media.tablet} {
         min-height: 60px;
-        justify-content: center;
+        // justify-content: center;
+    }
+
+    ${media.largeTablet} {
+        min-height: 70px;
+    }
+
+    ${media.modern} {
+        min-height: 80px;
     }
 `;
 
@@ -21,12 +29,23 @@ export const HeaderWrap = styled.header`
         color: ${colors.white};
         font-size: 18px;
         font-family: "Times New Roman", Times, serif;
-        font-weight: 600;
+        font-weight: 500;
         margin-left: 14px;
+        cursor: pointer;
 
         ${media.tablet} {
             font-size: 20px;
-            margin-left: 0;
+            // margin-left: 0;
+        }
+
+        ${media.largeTablet} {
+            font-size: 22px;
+            margin-left: 16px;
+        }
+
+        ${media.modern} {
+            font-size: 26px;
+            margin-left: 20px;
         }
 
         span {
@@ -35,8 +54,9 @@ export const HeaderWrap = styled.header`
     `;
 
     export const Close = styled.img`
-        width: 20px;
-        height: 20px;
+        width: 18px;
+        height: 18px;
         // border: 1px solid red;
         margin-right: 15px;
+        cursor: pointer;
     `;

@@ -26,7 +26,7 @@ function Datetime (props) {
 
     return (
         <DatetimeWrap>
-            <Header />
+            <Header reset={props.reset} />
             <Nav
                 page={props.page}
                 setPage={props.setPage} />
@@ -37,6 +37,7 @@ function Datetime (props) {
                 <Calendar
                     onChange={handleDate} 
                     minDate={new Date()}
+                    value={props.date}
                     tileClassName="cal_tile" />
 
                 <TimesBox>

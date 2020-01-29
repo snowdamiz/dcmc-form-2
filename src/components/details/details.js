@@ -24,7 +24,7 @@ function Details (props) {
 
     return (
         <DetailsWrap>
-            <Header />
+            <Header reset={props.reset} />
             <Nav
                 page={props.page}
                 setPage={props.setPage} />
@@ -66,7 +66,7 @@ function Details (props) {
                     onChange={handleComment} />
             </DetailsBox>  
             <SubmitBox>
-                <SubmitBtn onClick={props.submit}>Submit</SubmitBtn>
+                <SubmitBtn onClick={props.submit}>Schedule</SubmitBtn>
             </SubmitBox>
         </DetailsWrap>
     )

@@ -13,18 +13,7 @@ export const DetailsWrap = styled.section`
     align-items: center;
 
     ${media.tablet} {
-        width: 560px;
-        max-height: 800px;
-        min-height: 800px;
-        margin: 0px auto;
-    }
-
-    ${media.largeTablet} {
-        width: 900px;
-    }
-
-    ${media.modern} {
-        width: 1400px;
+        overflow-y: auto;
     }
 `;
 
@@ -69,6 +58,16 @@ export const DetailsWrap = styled.section`
 
             &:nth-of-type(2) {
                 margin-top: 16px;
+            }
+
+            ${media.largeTablet} {
+                font-size: 18px;
+                margin-bottom: 10px;
+            }
+
+            ${media.desktop} {
+                font-size: 20px;
+                margin-bottom: 14px;
             }
         }
     `;

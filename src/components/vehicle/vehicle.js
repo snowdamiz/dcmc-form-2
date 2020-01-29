@@ -59,7 +59,7 @@ function Vehicle (props) {
 
     return (
         <VehicleWrap>
-            <Header />
+            <Header reset={props.reset} />
             <Nav
                 page={props.page}
                 setPage={props.setPage}

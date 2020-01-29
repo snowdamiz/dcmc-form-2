@@ -18,6 +18,11 @@ export const NavWrap = styled.nav`
     ${media.tablet} {
         height: 76px;
     }
+
+    ${media.desktop} {
+        justify-content: center;
+        border-bottom: 3px solid #f2f2f2;
+    }
 `;
 
     export const ImgBox = styled.div``;

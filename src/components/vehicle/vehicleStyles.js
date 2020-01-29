@@ -13,18 +13,7 @@ export const VehicleWrap = styled.section`
     align-items: center;
 
     ${media.tablet} {
-        width: 560px;
-        max-height: 800px;
-        min-height: 800px;
         overflow-y: auto;
-    }
-
-    ${media.largeTablet} {
-        width: 900px;
-    }
-
-    ${media.modern} {
-        width: 1400px;
     }
 
     .head {
@@ -34,6 +23,7 @@ export const VehicleWrap = styled.section`
         color: ${colors.green};
         align-self: flex-start;
         margin-bottom: 8px;
+        margin-top: 20px;
 
         ${media.tablet} {
             margin-left: 26px;
@@ -41,10 +31,14 @@ export const VehicleWrap = styled.section`
 
         ${media.largeTablet} {
             margin-left: 136px;
+            font-size: 18px;
+            margin-bottom: 10px;
         }
 
         ${media.desktop} {
             margin-left: 376px;
+            font-size: 20px;
+            margin-bottom: 14px;
         }
     }
 `;
