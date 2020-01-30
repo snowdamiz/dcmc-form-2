@@ -130,6 +130,7 @@ export const BeverageWrap = styled.section`
                 export const IMG = styled.img`
                     // border: 1px solid green;
                     width: 100%;
+                    height: 130px;
                 `;
 
     export const ErrorMSG = styled.span`

@@ -175,7 +175,6 @@ function App() {
           setPage(3);
           break;
         }
-        // } else if (err[i] === 40 || 41 || 42 || 43) setPage(4);
       }
     } 
   }
