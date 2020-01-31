@@ -24,7 +24,7 @@ export const DatetimeWrap = styled.section`
         align-items: center;
         width: 300px;
         margin-top: 30px;
-        margin-bottom: 20px;
+        // margin-bottom: 20px;
 
         ${media.phone} {
             width: 360px;
