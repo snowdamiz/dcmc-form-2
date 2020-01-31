@@ -133,3 +133,69 @@ export const DetailsWrap = styled.section`
             bottom: 30px;
             color: ${colors.white};
         `;
+
+    export const CTA = styled.div`
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        align-items: center;
+        width: 270px;
+        margin-top: 50px;
+
+        ${media.phone} {
+            width: 340px;
+        }
+        
+        ${media.tablet} {
+            width: 400px;
+        }
+
+        ${media.largeTablet} {
+            width: 420px;
+            margin-top: 60px;
+        }
+
+        ${media.modern} {
+            width: 440px;
+        }
+
+        h1 {
+            font-size: 22px;
+            font-weight: bold;
+            color: ${colors.green};
+            font-family: ${fonts.heading};
+            line-height: 25px;
+            text-align: center;
+
+            &:nth-of-type(2) {
+                margin-top: 28px;
+                font-size: 18px;
+            }
+        }
+
+        .line {
+            width: 100px;
+            height: 2px;
+            background-color: ${colors.green};
+            margin-top: 30px;
+        }
+
+        .cto_btn {
+            width: 130px;
+            height: 36px;
+            background-color: ${colors.green};
+            font-family: ${fonts.text};
+            font-weight: 600;
+            color: ${colors.white};
+            border: 1px solid ${colors.green};
+            margin-top: 30px;
+
+            ${media.largeTablet} {
+                height: 38px;
+            }
+
+            ${media.modern} {
+                height: 42px;
+            }
+        }
+    `;

@@ -56,6 +56,7 @@ function Vehicle (props) {
     }
 
     const errs = props.errors;
+    const rows = props.rows.slice(0, 40);
 
     return (
         <VehicleWrap>
@@ -88,6 +89,34 @@ function Vehicle (props) {
                 </SelectionBox>
                 {errs.includes(10) ? <ErrorMSG>Plase Select a Vehicle</ErrorMSG> : null }
                 <CarBox productID={props.productID}>
+                    {showMakeType === false && showModelType === false && showYearType === false ? (
+                        rows.map((el) => {
+                            return (
+                                <Car
+                                    key={el.vin}
+                                    onClick={(e) => handleSelection(e, el) }>
+                                    <VehicleIMG src={el["image[0].url"]} />
+                                    <VehicleInfo>
+                                        <VehicleHeading>{el.title}</VehicleHeading>
+                                        <VehicleTextBox>
+                                            <VehicleTextBoxSec>
+                                                <VehicleText>VIN:</VehicleText>
+                                                <VehicleText>{el.vin}</VehicleText>
+                                            </VehicleTextBoxSec>
+                                            <VehicleTextBoxSec>
+                                                <VehicleText>Color:</VehicleText>
+                                                <VehicleText>{el.exterior_color}</VehicleText>
+                                            </VehicleTextBoxSec>
+                                            <VehicleTextBoxSec>
+                                                <VehicleText>Price:</VehicleText>
+                                                <VehicleText>{el.price}</VehicleText>
+                                            </VehicleTextBoxSec>
+                                        </VehicleTextBox>
+                                    </VehicleInfo>
+                                </Car>
+                            )
+                        })
+                    ) : null }
                     {showMakeType ? (
                         props.cars.map((el) => {
                             return (

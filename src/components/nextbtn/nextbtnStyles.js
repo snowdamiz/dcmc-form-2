@@ -5,7 +5,7 @@ export const NextBox = styled.section`
     width: 100%;
     padding: 20px 0;
     background-color: #f2f2f2;
-    position: absolute;
+    // position: absolute;
     bottom: 0;
     display: flex;
     flex-flow: colum nowrap;

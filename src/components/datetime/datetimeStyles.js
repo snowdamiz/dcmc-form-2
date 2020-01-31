@@ -6,7 +6,7 @@ export const DatetimeWrap = styled.section`
     min-height: 100%;
     // border: 1px solid blue;
     box-shadow: 0px 0px 10px #B7B7B7;
-    position: absolute;
+    // position: absolute; 
     display: flex;
     flex-flow: column nowrap;
     justify-content: flex-start;
@@ -24,6 +24,7 @@ export const DatetimeWrap = styled.section`
         align-items: center;
         width: 300px;
         margin-top: 30px;
+        margin-bottom: 20px;
 
         ${media.phone} {
             width: 360px;
