@@ -13,6 +13,7 @@ function App() {
   const [page, setPage] = useState(1);
   const [productID, setProductID] = useState("");
   const [errors, setErrors] = useState([]);
+  const [cta, setCta] = useState(false);
 
   const [date, setDate] = useState("");
   const [time, setTime] = useState("");
@@ -163,6 +164,7 @@ function App() {
       }
 
       Axios.post("https://dcwebleads.herokuapp.com/api/send", dataSubmitted);
+      setCta(true);
     } else {
       for (let i = 0; i < err.length; i++) {
         if (err[i] === 10) {
@@ -254,7 +256,8 @@ function App() {
               setAddress={setAddress}
               comment={comment}
               setComment={setComment}
-              reset={reset} />
+              reset={reset}
+              cta={cta} />
   }
 }
 
