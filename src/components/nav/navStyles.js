@@ -12,11 +12,10 @@ export const NavWrap = styled.nav`
     margin-top: 2px;
 
     ${media.phone} {
-        height: 70px;
+        height: 68px;
     }
 
     ${media.tablet} {
-        height: 76px;
     }
 
     ${media.desktop} {

@@ -72,7 +72,7 @@ export const DatetimeWrap = styled.section`
             .react-calendar__navigation {
                 margin-top: 14px;
                 border: none;
-                height: 30px;
+                height: 28px;
 
                 .react-calendar__navigation__label {
                     background-color: ${colors.white};
@@ -96,7 +96,7 @@ export const DatetimeWrap = styled.section`
             // MONTH VIEW - HEADER
             .react-calendar__month-view {
                 .react-calendar__month-view__weekdays {
-                    height: 50px;
+                    height: 46px;
                     background-color: #f2f2f2;
 
                     .react-calendar__month-view__weekdays__weekday {
@@ -117,10 +117,10 @@ export const DatetimeWrap = styled.section`
                 .react-calendar__month-view__days {
                     .cal_tile {
                         background-color: ${colors.white};
-                        height: 60px;
+                        height: 40px;
 
                         ${media.tablet} {
-                            height: 60x;
+                            height: 50px;
                             font-size: 16px;
                         }
                     }
@@ -136,7 +136,7 @@ export const DatetimeWrap = styled.section`
 
                     .react-calendar__tile {
                         border: none;
-                        height: 42px;
+                        height: 40px;
                         font-size: 14px;
                         font-family: ${fonts.text};
 
@@ -191,7 +191,7 @@ export const DatetimeWrap = styled.section`
             export const TimeBtn = styled.button`
                 width: 30%;
                 border: 1px solid ${colors.gray};
-                height: 36px;
+                height: 30px;
                 padding-top: 2px;
                 font-family: ${fonts.text};
                 font-size: 13px;
@@ -199,7 +199,7 @@ export const DatetimeWrap = styled.section`
                 color: ${colors.dark};
 
                 ${media.tablet} {
-                    height: 40px;
+                    height: 34px;
                 }
 
                 &:hover {

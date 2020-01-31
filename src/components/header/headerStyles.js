@@ -19,10 +19,6 @@ export const HeaderWrap = styled.header`
     ${media.largeTablet} {
         min-height: 70px;
     }
-
-    ${media.modern} {
-        min-height: 80px;
-    }
 `;
 
     export const H1 = styled.h1`
