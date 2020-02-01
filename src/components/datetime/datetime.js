@@ -26,31 +26,32 @@ function Datetime (props) {
 
         if (selectedDate[0] === today[0] && selectedDate[1] === today[1] && selectedDate[2] === today[2]) {
             console.log(today[0], today[1], today[2]);
+            console.log(selectedDate[0], selectedDate[1], selectedDate[2]);
 
             let time = selectedDate[4].toString().split(":");
             console.log(time);
 
-            if (time[1] > 10) {
+            if (time[0] > 10) {
                 setDisabled([10]);
             } else setDisabled([]);
 
-            if (time[1] > 11) {
+            if (time[0] > 11) {
                 setDisabled([10, 11]);
             } else setDisabled([]);
             
-            if (time[1] > 12) {
+            if (time[0] > 12) {
                 setDisabled([10, 11, 12]);
             } else setDisabled([]);
 
-            if (time[1] > 13) {
+            if (time[0] > 13) {
                 setDisabled([10, 11, 12, 1]);
             } else setDisabled([]);
 
-            if (time[1] > 14) {
+            if (time[0] > 14) {
                 setDisabled([10, 11, 12, 1, 2]);
             } else setDisabled([]);
 
-            if (time[1] > 15) {
+            if (time[0] > 15) {
                 setDisabled([10, 11, 12, 1, 2, 3])
             } else setDisabled([]);
         } else {
