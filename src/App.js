@@ -13,7 +13,7 @@ function App() {
   const [page, setPage] = useState(1);
   const [productID, setProductID] = useState("");
   const [errors, setErrors] = useState([]);
-  const [cta, setCta] = useState(true);
+  const [cta, setCta] = useState(false);
 
   const [date, setDate] = useState("");
   const [time, setTime] = useState("");
