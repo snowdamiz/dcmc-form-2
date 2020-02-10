@@ -32,7 +32,7 @@ function Details (props) {
                 setPage={props.setPage} />
             {cta ? (
                 <CTA>
-                    <h1>Your Test Drive Appointment Has Been Sent</h1>
+                    <h1>Your Test Drive Appointment<br/> Has Been Sent</h1>
                     <div className="line"></div>
                     <h1>If You would like to continue viewing our inventory please click on the button below</h1>
                     <a href="https://www.dcmotorcompany.com/used-vehicles-portland-or">

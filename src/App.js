@@ -13,7 +13,7 @@ function App() {
   const [page, setPage] = useState(1);
   const [productID, setProductID] = useState("");
   const [errors, setErrors] = useState([]);
-  const [cta, setCta] = useState(false);
+  const [cta, setCta] = useState(true);
 
   const [date, setDate] = useState("");
   const [time, setTime] = useState("");
@@ -34,7 +34,7 @@ function App() {
 
   useEffect(() => {
       function getData() {
-        const csvFile = require('./dcm.csv');
+        const csvFile = require('./MP15926.csv');
         Papa.parse(csvFile, {
           header: true,
           download: true,

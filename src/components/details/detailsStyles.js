@@ -92,6 +92,7 @@ export const DetailsWrap = styled.section`
             color: gray;
             padding: 0 10px;
             font-family: ${fonts.text};
+            border-radius: 3px;
 
             ${media.largeTablet} {
                 margin-bottom: 10px;
@@ -116,9 +117,6 @@ export const DetailsWrap = styled.section`
     export const SubmitBox = styled.section`
         width: 100%;
         padding: 20px 0;
-        background-color: #f5f5f5;
-        position: absolute;
-        bottom: 0;
         display: flex;
         flex-flow: colum nowrap;
         justify-content: center;
@@ -132,6 +130,21 @@ export const DetailsWrap = styled.section`
             background-color: ${colors.green};
             bottom: 30px;
             color: ${colors.white};
+            border-radius: 3px;
+            border: 1px solid ${colors.green};
+            font-weight: 17px;
+
+            ${media.largeTablet} {
+                font-size: 18px;
+                width: 150px;
+                height: 42px;
+            }
+
+            ${media.desktop} {
+                font-size: 20px;
+                width: 160px;
+                height: 46px;
+            }
         `;
 
     export const CTA = styled.div`
@@ -160,23 +173,29 @@ export const DetailsWrap = styled.section`
         }
 
         h1 {
-            font-size: 22px;
+            font-size: 20px;
             font-weight: bold;
-            color: ${colors.green};
+            color: ${colors.dark};
             font-family: ${fonts.heading};
             line-height: 25px;
             text-align: center;
 
+            ${media.desktop} {
+                font-size: 22px;
+            }
+
             &:nth-of-type(2) {
                 margin-top: 28px;
-                font-size: 18px;
+                font-size: 16px;
+                font-weight: normal;
+                line-height: 23px;
             }
         }
 
         .line {
             width: 100px;
             height: 2px;
-            background-color: ${colors.green};
+            background-color: ${colors.dark};
             margin-top: 30px;
         }
 

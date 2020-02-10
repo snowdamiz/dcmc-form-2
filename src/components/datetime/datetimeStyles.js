@@ -5,7 +5,6 @@ export const DatetimeWrap = styled.section`
     width: 100%;
     min-height: 100%;
     // border: 1px solid blue;
-    box-shadow: 0px 0px 10px #B7B7B7;
     // position: absolute; 
     display: flex;
     flex-flow: column nowrap;
@@ -68,6 +67,7 @@ export const DatetimeWrap = styled.section`
             border: 1px solid ${colors.gray};
             width: 100%;
             margin-bottom: 15px;
+            border-radius: 3px;
 
             // CALENDAR NAVIGATION
             .react-calendar__navigation {
@@ -197,6 +197,7 @@ export const DatetimeWrap = styled.section`
                 font-family: ${fonts.text};
                 font-size: 13px;
                 font-weight: 700;
+                border-radius: 3px;
                 color: ${colors.dark};
 
                 ${media.tablet} {

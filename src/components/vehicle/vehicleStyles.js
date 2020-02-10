@@ -86,6 +86,7 @@ export const VehicleWrap = styled.section`
                 border: 1px solid #D7D7D7;
                 padding: 6px 8px;
                 color: ${colors.dark};
+                border-radius: 3px;
             `;
 
                 export const Option = styled.option`
